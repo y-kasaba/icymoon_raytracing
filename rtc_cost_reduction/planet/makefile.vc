@@ -1,0 +1,73 @@
+## Makefile for MS VC++ ##########################
+CC   = cl
+LD   = link
+RSC  = rc
+OBJECT_EXP = .obj
+EXEC_EXP   = .lib
+PCH_EXP    = .pch
+LIBRT      = 
+INCLUDE_OPT=
+STDLIB     = kernel32.lib user32.lib winmm.lib
+
+RESOURCE =
+RES_OBJ  = $(RESOURCE:%.rc=$(OBJ_PATH)/%.res)
+
+
+# 作成するものを指定。
+# windows | console
+SUBSYS = WINDOWS
+
+
+# コンパイル時のフラグを指定
+CC_FLAG = \
+	/nologo /G6 /MT /W3 /GX /O2 /Ob2    \
+	/DWIN32                             \
+	/DNDEBUG                            \
+	/D_$(SUBSYS)                        \
+	/D_MBCS                             \
+	$(INCLUDE_OPT:%=/I%)                \
+	/Fo"$(OBJ_PATH)/" /Fd"$(OBJ_PATH)/" \
+	/Fp"$(OBJ_PATH)/$(PCH)"             \
+	/FD /c
+
+CC_OUTPUT_FLAG = /o
+
+PCH = $(LIBNAME)$(PCH_EXP)
+PCH_FLAG = \
+	/nologo /G6 /MT /W3 /GX /O2 /Ob2    \
+	/DWIN32                             \
+	/DNDEBUG                            \
+	/D_$(SUBSYS)                        \
+	/D_MBCS                             \
+	$(INCLUDE_OPT:%=/I%)                \
+	/Fo"$(OBJ_PATH)/" /Fd"$(OBJ_PATH)/" \
+	/Fp"$(OBJ_PATH)/$(PCH)"             \
+	/FD /c
+
+# リソースコンパイルのフラグを指定。
+RSC_FLAG = \
+	/l 0x411      \
+	/d  "NDEBUG"  \
+
+# リンク時のフラグを指定。
+LD_FLAG = $(STDLIB)              \
+	-lib                         \
+	/nologo /subsystem:$(SUBSYS) \
+	/incremental:no              \
+	/pdb:"$(LIBNAME).pdb"        \
+	/machine:I386
+
+LD_OUTPUT = /out:$(OUTPUT)
+
+include common.mak
+
+######################################################################
+$(PCH):
+	mkdir -p $(OBJ_PATH)
+	$(CC) $(PCH_FLAG) $(STDHEADER:%.h=%.cpp)
+
+$(RES_OBJ): $(OBJ_PATH) $(RESOURCE)
+	$(RSC) /fo"$@" $(RSC_FLAG) $(RESOURCE)
+
+local-clean:
+	rm -f ./$(OBJ_PATH)/*$(PCH_EXP)

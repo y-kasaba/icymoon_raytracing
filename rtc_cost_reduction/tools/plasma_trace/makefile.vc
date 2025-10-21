@@ -1,0 +1,44 @@
+# Makefile for Microsoft Visual C++. #############
+CC = cl
+LN = link
+OBJECT_EXP = obj
+STDLIB = \
+	../../lib/core.lib   \
+	../../lib/model.lib  \
+	../../lib/planet.lib
+
+include makefile.common
+PCH = $(LIBNAME).pch
+
+# コンパイル時のフラグを指定
+CC_FLAG = \
+	/nologo /G6 /MT /W3 /GX /O2         \
+	/D "WIN32" /D "NDEBUG"              \
+	/D "_WINDOWS" /D "_MBCS"            \
+	/Fo"$(OBJ_PATH)/" /Fd"$(OBJ_PATH)/" \
+	/FD /c
+
+LN_FLAG = $(STDLIB)                 \
+		/nologo /subsystem:console  \
+		/incremental:no             \
+		/pdb:"$(LIBNAME).pdb" \
+		/machine:I386
+
+##################################################
+all: $(OBJ_PATH) ${LIBNAME}.exe
+
+${LIBNAME}.exe: $(OBJ)
+	$(LN) $(LN_FLAG) $(OBJ) /out:"$@"
+
+$(OBJ_PATH)/%.$(OBJECT_EXP) :: %.cpp
+	$(CC) $(CC_FLAG)                    \
+	/Fo"$(OBJ_PATH)/" /Fd"$(OBJ_PATH)/" \
+	$< -o $@
+
+$(OBJ): $(STDHEADER)
+
+$(OBJ_PATH):
+	mkdir $(OBJ_PATH)
+
+clean:
+	rm -f ./$(OBJ_PATH)/*.$(OBJECT_EXP)

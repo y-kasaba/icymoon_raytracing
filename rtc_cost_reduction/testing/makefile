@@ -1,0 +1,44 @@
+## Makefile for GCC g++ ##########################
+CC = g++
+LD = g++
+OBJECT_EXP = .o
+PCH_EXP    = .gch
+EXEC_EXP   =
+LIBRT      = \
+    ../lib/core.a   \
+    ../lib/model.a  \
+    ../lib/planet.a \
+    /usr/lib/aarch64-linux-gnu/libboost_thread.a \
+    /usr/lib/aarch64-linux-gnu/libpthread.so \
+    /usr/lib/aarch64-linux-gnu/libnetcdf.so \
+
+INCLUDE_OPT= /usr/include
+STDLIB     = pthread boost_thread netcdf
+
+PCH = $(STDHEADER)$(PCH_EXP)
+
+# コンパイル時のフラグを指定
+CC_FLAG = -c -O2          \
+    $(INCLUDE_OPT:%=-I%)  \
+    -DNDEBUG              \
+    -D_THREAD_SAFE        \
+    -D_REENTRANT          \
+    -finline-functions    \
+    -funroll-loops        \
+
+#    -march=`arch`
+
+CC_OUTPUT_FLAG = -o
+LD_FLAG     = $(STDLIB:%=-l%)
+LD_OUTPUT   = -o $(OUTPUT)
+
+include common.mak
+
+##################################################
+$(PCH):
+	$(CC) $(PCH_FLAG) $(STDHEADER) -o $@
+
+
+local-clean:
+	rm -f ./$(PCH)
+

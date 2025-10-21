@@ -1,0 +1,49 @@
+# Makefile for Intel Compiler ###########################
+CC = icc
+LD = xiar
+OBJECT_EXP =.o
+PCH_EXP    =.pchi
+EXEC_EXP   =.a
+LIBRT      =
+INCLUDE_OPT=
+STDLIB     =
+
+# コンパイル時のフラグを指定
+CC_BASE_FLAG = -c -O3     \
+    $(INCLUDE_OPT:%=-I%)  \
+    -DNDEBUG              \
+    -D_THREAD_SAFE        \
+    -D_REENTRANT          \
+	-fexceptions          \
+    -finline-functions    \
+    -funroll-loops        \
+    -ipo                  \
+    -c99        \
+    -std=c99    \
+    -cxxlib-gcc \
+    -parallel   \
+    -openmp     \
+    -axNP       \
+    -march=`arch`
+CC_OUTPUT_FLAG = -o
+
+CC_FLAG = $(CC_BASE_FLAG)
+#         -use-pch $(PCH)
+
+
+#PCH      = $(STDHEADER:%.h=%$(PCH_EXP))
+#PCH_FLAG = -pch $(CC_BASE_FLAG)
+
+LD_FLAG     = $(STDLIB:%=-l%)
+LD_OUTPUT   = r $(OUTPUT)
+
+
+include common.mak
+
+##################################################
+#$(PCH):
+#	$(CC) $(PCH_FLAG) $(STDHEADER:%.h=%.cpp)     \
+#	$(CC_OUTPUT_FLAG) $(OBJ_PATH)/$(STDHEADER:%.h=%$(OBJECT_EXP))
+
+local-clean:
+#	rm -f ./$(PCH)

@@ -1,0 +1,30 @@
+testing start at : Tue Oct 29 14:49:18 2024
+
+x_list_size = 10201
+parallelround = 0-------------------------------------------------------------------------------
+ thr | proc[%]| status | thr | proc[%]| status | thr | proc[%]| status | all[%]
+   0 |     0% |   init ||    0%
+round = 1-------------------------------------------------------------------------------
+ thr | proc[%]| status | thr | proc[%]| status | thr | proc[%]| status | all[%]
+   0 |     0% |   init ||    0%
+round = 2-------------------------------------------------------------------------------
+ thr | proc[%]| status | thr | proc[%]| status | thr | proc[%]| status | all[%]
+   0 |     0% |   init ||    0%
+round = 3-------------------------------------------------------------------------------
+ thr | proc[%]| status | thr | proc[%]| status | thr | proc[%]| status | all[%]
+   0 |     0% |   init ||    0%
+round = 4-------------------------------------------------------------------------------
+ thr | proc[%]| status | thr | proc[%]| status | thr | proc[%]| status | all[%]
+   0 |     0% |   init ||    0%
+round = 5-------------------------------------------------------------------------------
+ thr | proc[%]| status | thr | proc[%]| status | thr | proc[%]| status | all[%]
+   0 |     0% |   init ||    0%
+round = 6-------------------------------------------------------------------------------
+ thr | proc[%]| status | thr | proc[%]| status | thr | proc[%]| status | all[%]
+   0 |     0% |   init ||    0%
+round = 7-------------------------------------------------------------------------------
+ thr | proc[%]| status | thr | proc[%]| status | thr | proc[%]| status | all[%]
+   0 |     0% |   init ||    0%
+round = 8-------------------------------------------------------------------------------
+ thr | proc[%]| status | thr | proc[%]| status | thr | proc[%]| status | all[%]
+   0 |     0% |   init ||    0%

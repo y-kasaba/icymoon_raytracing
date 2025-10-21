@@ -1,0 +1,14 @@
+# プリコンパイルヘッダを指定
+STDHEADER=plasma_trace.h
+LIBNAME  =ptrace
+
+SRC = \
+	plasma_trace.cpp    \
+
+
+OBJ = $(SRC:%.cpp=$(OBJ_PATH)/%.$(OBJECT_EXP))
+.SUFFIXES:.$(OBJECT_EXP).cpp
+
+#.oファイルを置く場所
+OBJ_PATH = object
+VPATH    = $(OBJ_PATH)

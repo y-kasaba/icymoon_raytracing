@@ -1,0 +1,43 @@
+## Makefile for GCC g++ ##########################
+CC = g++
+OBJECT_EXP = o
+LIBRT = \
+	../../lib/core.a   \
+	../../lib/model.a  \
+	../../lib/planet.a
+
+STDLIB = pthread boost_thread-mt
+
+include makefile.common
+PCH = $(STDHEADER).gch
+
+# コンパイル時のフラグを指定
+CC_FLAG = -c -O2          \
+    -DNDEBUG              \
+    -D_THREAD_SAFE        \
+    -D_REENTRANT          \
+    -finline-functions    \
+    -funroll-loops        \
+    -march=`arch`
+LD_FLAG = -pthread
+
+##################################################
+$(LIBNAME): $(OBJ) $(OBJ_PATH) $(LIBRT)
+	$(CC) $(LD_FLAG) -o $@ $(OBJ) $(LIBRT) \
+	$(STDLIB:%=-l%)
+
+$(PCH):
+	$(CC) $(CC_FLAG) $(STDHEADER) -o $@
+
+$(OBJ_PATH)/%.$(OBJECT_EXP) :: %.cpp
+	$(CC) $(CC_FLAG) $< -o $@
+
+$(OBJ): $(STDHEADER) $(PCH)
+
+$(OBJ_PATH):
+	mkdir $(OBJ_PATH)
+
+clean:
+	rm -f ./$(OBJ_PATH)/*.$(OBJECT_EXP)
+	rm -f ./$(PCH)
+

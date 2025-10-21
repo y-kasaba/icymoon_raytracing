@@ -1,0 +1,34 @@
+## Makefile for GCC g++ with Debug ###############
+CC = g++
+LD = g++
+OBJECT_EXP = .dbg.o
+PCH_EXP    = .gch
+EXEC_EXP   =
+LIBRT      = \
+    ../lib/core.a   \
+    ../lib/model.a  \
+    ../lib/planet.a
+INCLUDE_OPT=
+STDLIB     = pthread boost_thread
+
+PCH = $(STDHEADER)$(PCH_EXP)
+
+# コンパイル時のフラグを指定
+CC_FLAG = -c -g           \
+    $(INCLUDE_OPT:%=-I%)  \
+    -D_DEBUG              \
+    -D_THREAD_SAFE        \
+    -D_REENTRANT
+CC_OUTPUT_FLAG = -o
+LD_FLAG     = $(STDLIB:%=-l%)
+LD_OUTPUT   = -o $(OUTPUT)
+
+include common.mak
+
+##################################################
+$(PCH):
+	$(CC) $(PCH_FLAG) $(STDHEADER) -o $@
+
+local-clean:
+	rm -f ./$(PCH)
+

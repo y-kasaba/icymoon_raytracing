@@ -1,0 +1,23 @@
+# Makefile for GCC g++ ###########################
+all: library models planets
+
+testing: all
+	make -C testing -f makedbg.gcc
+
+library: lib
+	make -C src -f makedbg.gcc
+
+models: lib
+	make -C model -f makedbg.gcc
+
+planets: lib models
+	make -C planet -f makedbg.gcc
+
+lib:
+	mkdir $lib
+
+clean:
+	make -C src -f makedbg.gcc clean
+	make -C model -f makedbg.gcc clean
+	make -C planet -f makedbg.gcc clean
+	make -C testing -f makedbg.gcc clean

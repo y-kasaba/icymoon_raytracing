@@ -1,0 +1,2063 @@
+From: <Microsoft Internet Explorer 5 ‚Å•Û‘¶‚·‚é>
+Subject: Background: Coordinate systems and transformations
+Date: Fri, 28 Oct 2005 15:44:39 +0900
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	boundary="----=_NextPart_000_0000_01C5DBD6.8172DD00";
+	type="text/html"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2800.1106
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coortran.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Background: Coordinate systems and =
+transformations</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1">
+<META name=3Dcoordinates,transformations>
+<SCRIPT src=3D"http://www.spenvis.oma.be/spenvis/js/target.js"></SCRIPT>
+
+<META content=3D"MSHTML 6.00.2800.1106" name=3DGENERATOR></HEAD>
+<BODY vLink=3Dblue aLink=3Dblue link=3Dblue=20
+background=3Dhttp://www.spenvis.oma.be/spenvis/images/helpback.gif>
+<CENTER>
+<TABLE align=3Dmiddle border=3D4>
+  <TBODY>
+  <TR bgColor=3D#d0e0e0>
+    <TD align=3Dmiddle width=3D200><A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/system/toc.html"><B>Table =
+of=20
+      Contents</B></A></TD>
+    <TD align=3Dmiddle width=3D160><A onclick=3D"return =
+outwin(this,'ECSS')"=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/ecss/ecss.html"><B>ECSS</B></A>=
+</TD>
+    <TD align=3Dmiddle width=3D160><A onclick=3D"return =
+outwin(this,'MAIN')"=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/htbin/spenvis.exe?%23resettoPre=
+vious(packages.html)"><B>Model=20
+      Page</B></A></TD></TR>
+  <TR bgColor=3D#d0e0e0>
+    <TD align=3Dmiddle rowSpan=3D2><A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/background.html=
+"><B>Background=20
+      Information</B></A></TD>
+    <TD align=3Dmiddle colSpan=3D2><A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/background.html=
+"><B>Background=20
+      Information</B></A></TD></TR>
+  <TR bgColor=3D#d0e0e0>
+    <TD align=3Dmiddle colSpan=3D2><B>Coordinate=20
+systems</B></TD></TR></TBODY></TABLE></CENTER>
+<P>
+<H1>Coordinate systems and transformations</H1>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#Introduction">Introduction</A>=20
+
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#General Remarks">General=20
+  Remarks</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#Spherical">Spherical=20
+  and Cartesian Coordinates</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GEI">The=20
+  Geocentric Equatorial Inertial System</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GEO">Geographic=20
+  Coordinates</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GEOD">Geodetic=20
+  Coordinates</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#MAG">Geomagnetic=20
+  Coordinates</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GSE">Geocentric=20
+  Solar Ecliptic System</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GSEQ">Geocentric=20
+  Solar Equatorial System</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GSM">Geocentric=20
+  Solar Magnetospheric System</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#SM">Solar=20
+  Magnetic Coordinates</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#ILL">Illustration</A>=20
+
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#Transformations">Calculation=20
+  of transformation matrices to and from other coordinate systems</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">References</A>=20
+  </LI></UL>
+<H2><A name=3DIntroduction></A>Introduction</H2>
+<P>The need for the use of more than one coordinate system arises from =
+the fact=20
+that many different physical phenomena are easier calculated or =
+understood in a=20
+system that is appropriate for the phenomenon. Frequently, it is =
+necessary to=20
+transform from one coordinate system to another. The transformations =
+needed are=20
+described in <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Smart=20
+(1944)</A>, <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Mead=20
+(1970)</A>, <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Goldstein=20
+(1950)</A>, <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Olson=20
+(1970)</A> and by the <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Magnetic=20
+and Electric Fields Branch, GSFC(1970)</A>. The definitions used for the =
+various=20
+coordinate systems described here come from <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Russell=20
+(1971)</A>. The transformations were taken from <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Hapgood=20
+(1991)</A>.=20
+<P>The coordinate systems and transformations described on this page are =
+all=20
+geocentric coordinates. This means that the centre of the Earth is taken =
+as=20
+origin, and the transformations do not include any translations. =
+Additional=20
+information on these and other coordinate systems (such as heliocentric =
+and=20
+boundary normal systems) is available at the <A=20
+onclick=3D"return outwin(this,'EXTERNAL')"=20
+href=3D"http://sspg1.bnsc.rl.ac.uk/Share/Coordinates/ct_home.htm">Space =
+Plasma=20
+Group website at Ral</A>, maintained by Mike Hapgood.=20
+<H2><A name=3D"General Remarks"></A>General Remarks</H2>
+<P>For the definition of a coordinate system in threedimensional space, =
+one has=20
+only to specify the direction of one of the axes, and the orientation of =
+one of=20
+the other axes in the plane perpendicular to this direction. The third =
+axis=20
+follows automatically in order to complete a right-handed orthogonal =
+set.=20
+<P>Transformations may conveniently be performed using matrix =
+arithmetic. For=20
+each transformation, there is a transformation matrix <I>T</I> such that =
+
+<I><B>Q</B></I><SUB>b</SUB> =3D <I>T<B>Q</B></I><SUB>a</SUB>, where=20
+<I><B>Q</B></I><SUB>a</SUB> is a vector in the first coordinate system, =
+and=20
+<I><B>Q</B></I><SUB>b</SUB> is the same vector in the second coordinate =
+system.=20
+The transformation is thus totally described by the nine components of =
+the=20
+matrix <I>T</I>.=20
+<P>One fortunate feature of transformation matrices is that the inverse =
+is equal=20
+to the transpose of the matrix, i.e., if :=20
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor01.=
+gif"=20
+align=3Dbottom> </CENTER><BR>where (<I>X</I><SUB>1</SUB>, =
+<I>X</I><SUB>2</SUB>,=20
+<I>X</I><SUB>3</SUB>) are the direction cosines of the =
+<I>X</I>-direction of the=20
+b-system, expressed in function of <I>X</I>, <I>Y</I> and <I>Z</I> of =
+the=20
+a-system. Evidently, for the <I>Y</I>- and <I>Z</I>-direction, we find =
+the=20
+corresponding (<I>Y</I><SUB>1</SUB>, <I>Y</I><SUB>2</SUB>, =
+<I>Y</I><SUB>3</SUB>)=20
+and (<I>Z</I><SUB>1</SUB>, <I>Z</I><SUB>2</SUB>, <I>Z</I><SUB>3</SUB>). =
+For the=20
+inverse transformation, we simply find:<BR><BR>
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor02.=
+gif"=20
+align=3Dbottom> </CENTER><BR>When two or more transformations have to be =
+carried=20
+out, these can easily be obtained by a simple multiplication of the=20
+corresponding matrices.=20
+<H2><A name=3DSpherical>Spherical and Cartesian Coordinates</A></H2>
+<P>In some coordinate systems, especially GEO and MAG, position is often =
+
+specified in terms of colatitude <I>theta</I>, longitude <I>phi</I> and =
+radial=20
+distance <I>r</I>. These are related to Cartesian components using :=20
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor03.=
+gif"=20
+align=3Dbottom> </CENTER>and=20
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor04.=
+gif"=20
+align=3Dbottom> </CENTER>
+<H2><A name=3DGEI></A>The Geocentric Equatorial Inertial System</H2>
+<P>The Geocentric Equatorial Inertial Systam (GEI) has its <I>X</I>-axis =
+
+pointing from the Earth towards the first point of Aries (i.e. the =
+position of=20
+the sun at the vernal equinox). This direction is the intersection of =
+the=20
+Earth's equatorial plane and the ecliptic plane. The <I>Z</I>-axis is =
+parallel=20
+to the rotation axis of the Earth and <I>Y</I> completes the =
+right-handed=20
+orthogonal set (<I><B>Y</B></I> =3D <I><B>Z</B></I> x <I><B>X</B></I>).=20
+<P>The normal GEI coordinate system changes slowly in time owing to the =
+effects=20
+of astronomical precession and the nutation of the Earth's rotation =
+axis. The=20
+transformations described here are strictly correct if the epoch-of-date =
+
+inertial system is used. <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Hapgood=20
+(1995)</A> describes how the transformations should be adjusted to take =
+account=20
+of this time depence of the GEI system.=20
+<P><A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#Transformations">Calculation=20
+of transformation matrices to and from other coordinate systems</A>.=20
+<H2><A name=3DGEO></A>Geographic Coordinates</H2>
+<P>The Geographic Coordinate system (GEO) is defined so that its =
+<I>X</I>-axis=20
+is in the Earth's equatorial plane but is fixed with the rotation of the =
+Earth=20
+so that it passes through the Greenwich meridian (0=B0 longitude). Its=20
+<I>Z</I>-axis is parallel to the rotation axis of the Earth, and its=20
+<I>Y</I>-axis completes a right-handed orthogonal set (<I><B>Y</B></I> =
+=3D=20
+<I><B>Z</B></I> x <I><B>X</B></I>).=20
+<P><A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#Transformations">Calculation=20
+of transformation matrices to and from other coordinate systems</A>.=20
+<H2><A name=3DGEOD>Geodetic Coordinates</A></H2>
+<P>The geodetic coordinate system defines a position in terms of =
+latitude,=20
+longitude and altitude above the ellipsoidal surface of the Earth (see =
+Figure=20
+1).=20
+<CENTER>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG=20
+      =
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/ellips.=
+gif">=20
+    </TD></TR>
+  <TR>
+    <TD><B>Figure 1. Cross section of ellipsoid (taken from <A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Kelso</A>)</B>=20
+    </TD></TR></TBODY></TABLE></CENTER>
+<P>The ellipsoidal surface is a surface of resolution obtained by =
+rotating an=20
+ellips around the minor axis. Thus, the <EM>geodetic longitude</EM> is =
+the same=20
+as the geographic longitude, and only a meridional section must be =
+considered.=20
+<P>The <EM>local horizon</EM> is defined as the plane that is tangent to =
+the=20
+Earth's surface at a given position. The surface considered is the =
+<EM>reference=20
+ellipsoid</EM>. The <EM>local zenith</EM> is the direction away from the =
+point=20
+on the Earth's surface perpendicular to the local horizon. On a sphere, =
+this=20
+direction is always directly away from the Earth's centre, but on an =
+ellipsoid,=20
+this is not the case (except on the equator and at the poles).=20
+<P>The <EM>geodetic latitude</EM>, <I>phi</I> is the angle between the =
+local=20
+zenith and the equatorial plane. Except at the poles and the equator, =
+<I>phi</I>=20
+differs from the geocentric latitude <I>phi'</I>.=20
+<P>The point on the Earth surface directly below a given point above the =
+surface=20
+is not on a line joining the given point and the centre of the Earth. It =
+is the=20
+point where the local zenith points to the given point (see Figure 2). =
+The=20
+geodetic altitude <I>h</I> is the distance from the point to the surface =
+along=20
+the local zenith direction.=20
+<CENTER>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><IMG=20
+      =
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/ellips2=
+.gif">=20
+    </TD></TR>
+  <TR>
+    <TD><B>Figure 2. Sub-point and altitude (taken from <A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Kelso</A>)</B>=20
+    </TD></TR></TBODY></TABLE></CENTER>
+<P>
+<P>The reference ellipsoid is defined by two parameters, <I>a</I>, the=20
+semi-major axis, and <I>f</I>, the flattening, defined as: <BR><BR>
+<CENTER><I>f</I> =3D (<I>a</I> - <I>b</I>) / <I>a</I> </CENTER><BR>where =
+<I>b</I>=20
+is the semi-minor axis.=20
+<P>Global ellipsoidal parameters are derived from satellite data. =
+Historically,=20
+local, regional and global best fitting ellipsoids have been considered. =
+Table 1=20
+lists some of these reference ellipsoids.=20
+<P>
+<CENTER>
+<TABLE border=3D1>
+  <CAPTION><B>Table 1. Reference ellipsoids</B></CAPTION>
+  <TBODY>
+  <TR bgColor=3D#ffd700>
+    <TH>Name</TH>
+    <TH>semi-major axis<BR>[m]</TH>
+    <TH>1/flattening</TH>
+    <TH>Application</TH></TR>
+  <TR>
+    <TD>WGS 84</TD>
+    <TD>6378137</TD>
+    <TD>298.257</TD>
+    <TD>DoD (GPS)</TD></TR>
+  <TR>
+    <TD>GRS 80</TD>
+    <TD>6378137</TD>
+    <TD>298.257</TD>
+    <TD>IAG (Geo Ref Sys)</TD></TR>
+  <TR>
+    <TD>WGS 72</TD>
+    <TD>6378135</TD>
+    <TD>298.26</TD>
+    <TD>DoD (Doppler)</TD></TR>
+  <TR>
+    <TD>GRS 67</TD>
+    <TD>6378160</TD>
+    <TD>298.25</TD>
+    <TD>Australia 1966, South America 1969</TD></TR>
+  <TR>
+    <TD>IAU (1964)</TD>
+    <TD>6378160</TD>
+    <TD>298.25</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>Krassovsky (1940)</TD>
+    <TD>6378245</TD>
+    <TD>298.3</TD>
+    <TD>Russia</TD></TR>
+  <TR>
+    <TD>International (1924)</TD>
+    <TD>6378388</TD>
+    <TD>297</TD>
+    <TD>Europe (ReTrig)</TD></TR>
+  <TR>
+    <TD>Clarke (1880)</TD>
+    <TD>6378249</TD>
+    <TD>293</TD>
+    <TD>France, Africa</TD></TR>
+  <TR>
+    <TD>Clarke (1866)</TD>
+    <TD>6378206</TD>
+    <TD>294.98</TD>
+    <TD>North America</TD></TR>
+  <TR>
+    <TD>Bessel (1841)</TD>
+    <TD>6377397</TD>
+    <TD>299.15</TD>
+    <TD>German DHDN</TD></TR>
+  <TR>
+    <TD>Airy (1830)</TD>
+    <TD>6376542</TD>
+    <TD>299</TD>
+    <TD>Great Britain</TD></TR>
+  <TR>
+    <TD>Everest (1830)</TD>
+    <TD>6377276</TD>
+    <TD>300</TD>
+    <TD>India</TD></TR></TBODY></TABLE></CENTER>
+<P>The implementations in SPENVIS and <A=20
+onclick=3D"return outwin(this,'EXTERNAL')"=20
+href=3D"http://www.oma.be/NEEDLE/unilib.php">UNILIB</A> use the IAU =
+(1964)=20
+reference ellipsoid.=20
+<P>The conversion from ellipsoidal coordinates to cartesian coordinates =
+is given=20
+by:=20
+<P>
+<CENTER>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD><I>X</I></TD>
+    <TD>=3D</TD>
+    <TD>(<I>N</I> + <I>h</I>) cos(<I>phi</I>) =
+cos(<I>lambda</I>)</TD></TR>
+  <TR>
+    <TD><I>Y</I></TD>
+    <TD>=3D</TD>
+    <TD>(<I>N</I> + <I>h</I>) cos(<I>phi</I>) =
+sin(<I>lambda</I>)</TD></TR>
+  <TR>
+    <TD><I>Z</I></TD>
+    <TD>=3D</TD>
+    <TD>[<I>N</I>(1 - <I>e</I><SUP>2</SUP>) + <I>h</I>]=20
+  sin(<I>phi</I>)</TD></TR></TBODY></TABLE></CENTER>
+<P>with:=20
+<UL>
+  <LI><I>h</I>: the altitude;=20
+  <LI><I>phi</I>: the latitude;=20
+  <LI><I>lambda</I>: the longitude;=20
+  <LI><I>e</I>: the first eccentricity <I>e</I> =3D =
+(<I>a</I><SUP>2</SUP> -=20
+  <I>b</I><SUP>2</SUP>)<SUP>1/2</SUP> / <I>a</I>;=20
+  <LI><I>N</I>: the radius of curvature in the prime vertical: =
+</LI></UL>
+<CENTER><I>N</I> =3D <I>a</I> [1 - <I>f</I> (2 - <I>f</I>)=20
+sin<SUP>2</SUP>(<I>phi</I>)]<SUP>-1/2</SUP> </CENTER>
+<P>The inverse conversion can be iteratively computed from: <BR><BR>
+<CENTER>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=3Dright><I>h</I></TD>
+    <TD>=3D</TD>
+    <TD>(<I>X</I><SUP>2</SUP> + <I>Y</I><SUP>2</SUP>)<SUP>1/2</SUP> /=20
+      cos(<I>phi</I>) - <I>N</I></TD></TR>
+  <TR>
+    <TD align=3Dright>tan(<I>phi</I>)</TD>
+    <TD>=3D</TD>
+    <TD><I>Z</I> (<I>X</I><SUP>2</SUP> + =
+<I>Y</I><SUP>2</SUP>)<SUP>-1/2</SUP>=20
+      [1 - <I>e</I><SUP>2</SUP> <I>N</I> / (<I>N</I> +=20
+  <I>h</I>)]<SUP>-1</SUP></TD></TR>
+  <TR>
+    <TD align=3Dright>tan(<I>lambda</I>)</TD>
+    <TD>=3D</TD>
+    <TD><I>Y</I> / <I>X</I></TD></TR></TBODY></TABLE></CENTER><BR>
+<H2><A name=3DMAG></A>Geomagnetic Coordinates</H2>
+<P>The Geomagnetic Coordinate system (MAG) is defined so that its =
+<I>Z</I>-axis=20
+is parallel to the magnetic dipole axis. The <I>Y</I>-axis of this =
+system is=20
+perpendicular to the geographic poles such that if <I><B>D</B></I> is =
+the dipole=20
+position and <I><B>S</B></I> is the south pole <I><B>Y</B></I> =3D =
+<I><B>D</B></I>=20
+x <I><B>S</B></I>. Finally, the <I>X</I>-axis completes a right-handed=20
+orthogonal set.=20
+<P>The Geographic coordinates of the dipole axis derived from the =
+International=20
+Geomagnetic Reference Field 1995 (IGRF-1995) are 79.30=B0N and =
+288.59=B0E for 1995.=20
+The values for the other IGRF epochs are listed in Table 2. It should be =
+noted=20
+that the magnetic pole is <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/magfield/cd.htm=
+l#ED">moving</A>=20
+with a speed of 2.6 km per year in the direction 15.6=B0N, 150.9=B0E. =
+More=20
+information on the magnetic dipole and its variations can be found in <A =
+
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Fraser-Smith=20
+(1987)</A>.=20
+<P>
+<CENTER>
+<TABLE cols=3D3 border=3D1>
+  <CAPTION><B>Table 2. Position of the Centred Dipole Model Northern=20
+  Pole</B></CAPTION>
+  <TBODY>
+  <TR bgColor=3D#ffd700>
+    <TH align=3Dmiddle><B>Year</B></TD>=20
+    <TH align=3Dmiddle><B>Latitude</B></TD>=20
+    <TH align=3Dmiddle><B>Longitude</B></TD> </TR>
+  <TR>
+    <TD align=3Dmiddle=20
+      =
+rowSpan=3D11>1945<BR>1950<BR>1955<BR>1960<BR>1965<BR>1970<BR>1975<BR>1980=
+<BR>1985<BR>1990<BR>1995</TD>
+    <TD align=3Dmiddle=20
+      =
+rowSpan=3D11>78.47<BR>78.47<BR>78.46<BR>78.51<BR>78.53<BR>78.59<BR>78.69<=
+BR>78.81<BR>78.97<BR>79.13<BR>79.30</TD>
+    <TD align=3Dmiddle=20
+      =
+rowSpan=3D11>291.47<BR>291.15<BR>290.84<BR>290.53<BR>290.15<BR>289.82<BR>=
+289.53<BR>289.24<BR>289.10<BR>288.89<BR>288.59</TD></TR></TBODY></TABLE><=
+/CENTER>
+<P><A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#Transformations">Calculation=20
+of transformation matrices to and from other coordinate systems</A>.=20
+<H2><A name=3DGSE></A>Geocentric Solar Ecliptic System</H2>
+<P>The Geocentric Solar Ecliptic System (GSE) has its <I>X</I>-axis =
+pointing=20
+from the Earth towards the sun and its <I>Y</I>-axis is chosen to be in =
+the=20
+ecliptic plane pointing towards dusk (thus opposing planetary motion). =
+Its=20
+<I>Z</I>-axis is parallel to the ecliptic pole. Relative to an inertial =
+system=20
+this system has a yearly rotation.=20
+<P><A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#Transformations">Calculation=20
+of transformation matrices to and from other coordinate systems</A>.=20
+<H2><A name=3DGSEQ></A>Geocentric Solar Equatorial System</H2>
+<P>The Geocentric Solar Equatorial System (GSEQ) as with the <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GSE">GSE</A>=20
+system has its <I>X</I>-axis pointing towards the Sun from the Earth. =
+However,=20
+instead of having its <I>Y</I>-axis in the ecliptic plane, the GSEQ=20
+<I>Y</I>-axis is parallel to the Sun's equatorial plane which is =
+inclined to the=20
+ecliptic. We note that since the <I>X</I>-axis is in the ecliptic plane =
+and=20
+therefore is not necessarily in the Sun's equatorial plane, the =
+<I>Z</I>-axis of=20
+this system will not necessarily be parallel to the Sun's axis of =
+rotation.=20
+However, the Sun's axis of rotation must lie in the <I>X</I>-<I>Z</I> =
+plane. The=20
+<I>Z</I>-axis is chosen to be in the same sense as the ecliptic pole, =
+i.e.=20
+northwards.=20
+<H2><A name=3DGSM></A>Geocentric Solar Magnetospheric System</H2>
+<P>The Geocentric Solar Magnetospheric System (GSM), as with both the <A =
+
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GSE">GSE</A>=20
+and <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GSEQ">GSEQ</A>=20
+systems, has its <I>X</I>-axis from the Earth to the Sun. The =
+<I>Y</I>-axis is=20
+defined to be perpendicular to the Earth's magnetic dipole so that the=20
+<I>X</I>-<I>Z</I> plane contains the dipole axis. The positive =
+<I>Z</I>-axis is=20
+chosen to be in the same sense as the northern magnetic pole. The =
+difference=20
+between the GSM system and the GSE and GSEQ is simply a rotation about =
+the=20
+<I>X</I>-axis.=20
+<P><A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#Transformations">Calculation=20
+of transformation matrices to and from other coordinate systems</A>.=20
+<H2><A name=3DSM></A>Solar Magnetic Coordinates</H2>
+<P>In Solar Magnetic Coordinates (SM) the <I>Z</I>-axis is chosen =
+parallel to=20
+the north magnetic pole and the <I>Y</I>-axis perpendicular to the =
+Earth-Sun=20
+line towards dusk. The difference between this system and the <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#GSM">GSM</A>=20
+system is a rotation about the <I>Y</I>-axis. The amount of rotation is =
+simply=20
+the dipole tilt angle as defined in the previous section. We note that =
+in this=20
+system the <I>X</I>-axis does not point directly at the Sun. As with the =
+GSM=20
+system, the SM system rotates with both a yearly and daily period with =
+respect=20
+to inertial coordinates.=20
+<P><A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#Transformations">Calculation=20
+of transformation matrices to and from other coordinate systems</A>.=20
+<H2><A name=3DILL></A>Illustration</H2>
+<P>
+<CENTER>
+<TABLE width=3D1>
+  <TBODY>
+  <TR>
+    <TD><A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/anim.h=
+tml"><IMG=20
+      height=3D400=20
+      =
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortra=
+ns.gif"=20
+      width=3D640 border=3D0></A></TD></TR>
+  <TR>
+    <TD align=3Dmiddle><B>Figure 3. Coordinate transformations for =
+Brussels. The=20
+      red ring is the geocentric equator, the black one the magnetic =
+equator and=20
+      the magenta ring is the ecliptic plane (Click on the gif to see an =
+
+      animation [213 Kbytes]).</B></TD></TR></TBODY></TABLE></CENTER>
+<H1><A name=3DTransformations>Calculation of transformation =
+matrices</A></H1>
+<P>
+<CENTER>
+<TABLE border=3D1>
+  <CAPTION><B>Table 3. Transformation matrices between the coordinate =
+systems=20
+  defined in the text</B></CAPTION>
+  <TBODY>
+  <TR>
+    <TD align=3Dmiddle bgColor=3D#ffd700 rowSpan=3D2>To </TD>
+    <TD align=3Dmiddle bgColor=3D#ffd700 colSpan=3D6>From </TD></TR>
+  <TR bgColor=3D#ffd700>
+    <TD align=3Dmiddle><B>GEI</B></TD>
+    <TD align=3Dmiddle><B>GEO</B></TD>
+    <TD align=3Dmiddle><B>GSE</B></TD>
+    <TD align=3Dmiddle><B>GSM</B></TD>
+    <TD align=3Dmiddle><B>SM</B></TD>
+    <TD align=3Dmiddle><B>MAG</B></TD></TR>
+  <TR>
+    <TD align=3Dmiddle bgColor=3D#ffd700><B>GEI</B></TD>
+    <TD align=3Dmiddle>1</TD>
+    <TD align=3Dmiddle><I>T</I><SUB>1</SUB><SUP>-1</SUP></TD>
+    <TD align=3Dmiddle><I>T</I><SUB>2</SUB><SUP>-1</SUP></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>2</SUB><SUP>-1</SUP><I>T</I><SUB>3</SUB><SUP>=
+-1</SUP></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>2</SUB><SUP>-1</SUP><I>T</I><SUB>3</SUB><SUP>=
+-1</SUP><I>T</I><SUB>4</SUB><SUP>-1</SUP></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>1</SUB><SUP>-1</SUP><I>T</I><SUB>5</SUB><SUP>=
+-1</SUP></TD></TR>
+  <TR>
+    <TD align=3Dmiddle bgColor=3D#ffd700><B>GEO</B></TD>
+    <TD align=3Dmiddle><A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T1"><I>T</I><SUB>1</SUB></A></TD>
+    <TD align=3Dmiddle>1</TD>
+    <TD =
+align=3Dmiddle><I>T</I><SUB>1</SUB><I>T</I><SUB>2</SUB><SUP>-1</SUP></TD>=
+
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>1</SUB><I>T</I><SUB>2</SUB><SUP>-1</SUP><I>T<=
+/I><SUB>3</SUB><SUP>-1</SUP></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>1</SUB><I>T</I><SUB>2</SUB><SUP>-1</SUP><I>T<=
+/I><SUB>3</SUB><SUP>-1</SUP><I>T</I><SUB>4</SUB><SUP>-1</SUP></TD>
+    <TD align=3Dmiddle><I>T</I><SUB>5</SUB><SUP>-1</SUP></TD></TR>
+  <TR>
+    <TD align=3Dmiddle bgColor=3D#ffd700><B>GSE</B></TD>
+    <TD align=3Dmiddle><A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T2"><I>T</I><SUB>2</SUB></A></TD>
+    <TD =
+align=3Dmiddle><I>T</I><SUB>2</SUB><I>T</I><SUB>1</SUB><SUP>-1</SUP></TD>=
+
+    <TD align=3Dmiddle>1</TD>
+    <TD align=3Dmiddle><I>T</I><SUB>3</SUB><SUP>-1</SUP></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>3</SUB><SUP>-1</SUP><I>T</I><SUB>4</SUB><SUP>=
+-1</SUP></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>2</SUB><I>T</I><SUB>1</SUB><SUP>-1</SUP><I>T<=
+/I><SUB>5</SUB><SUP>-1</SUP></TD></TR>
+  <TR>
+    <TD align=3Dmiddle bgColor=3D#ffd700><B>GSM</B></TD>
+    <TD align=3Dmiddle><I>T</I><SUB>3</SUB><I>T</I><SUB>2</SUB></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>3</SUB><I>T</I><SUB>2</SUB><I>T</I><SUB>1</SU=
+B><SUP>-1</SUP></TD>
+    <TD align=3Dmiddle><A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T3"><I>T</I><SUB>3</SUB></A></TD>
+    <TD align=3Dmiddle>1</TD>
+    <TD align=3Dmiddle><I>T</I><SUB>4</SUB><SUP>-1</SUP></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>3</SUB><I>T</I><SUB>2</SUB><I>T</I><SUB>1</SU=
+B><SUP>-1</SUP><I>T</I><SUB>5</SUB><SUP>-1</SUP></TD></TR>
+  <TR>
+    <TD align=3Dmiddle bgColor=3D#ffd700><B>SM</B></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>4</SUB><I>T</I><SUB>3</SUB><I>T</I><SUB>2</SU=
+B></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>4</SUB><I>T</I><SUB>3</SUB><I>T</I><SUB>2</SU=
+B><I>T</I><SUB>1</SUB><SUP>-1</SUP></TD>
+    <TD align=3Dmiddle><I>T</I><SUB>4</SUB><I>T</I><SUB>3</SUB></TD>
+    <TD align=3Dmiddle><A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T4"><I>T</I><SUB>4</SUB></A></TD>
+    <TD align=3Dmiddle>1</TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>4</SUB><I>T</I><SUB>3</SUB><I>T</I><SUB>2</SU=
+B><I>T</I><SUB>1</SUB><SUP>-1</SUP><I>T</I><SUB>5</SUB><SUP>-1</SUP></TD>=
+</TR>
+  <TR>
+    <TD align=3Dmiddle bgColor=3D#ffd700><B>MAG</B></TD>
+    <TD align=3Dmiddle><I>T</I><SUB>5</SUB><I>T</I><SUB>1</SUB></TD>
+    <TD align=3Dmiddle><A=20
+      =
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T5"><I>T</I><SUB>5</SUB></A></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>5</SUB><I>T</I><SUB>1</SUB><I>T</I><SUB>2</SU=
+B><SUP>-1</SUP></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>5</SUB><I>T</I><SUB>1</SUB><I>T</I><SUB>2</SU=
+B><SUP>-1</SUP><I>T</I><SUB>3</SUB><SUP>-1</SUP></TD>
+    <TD=20
+      =
+align=3Dmiddle><I>T</I><SUB>5</SUB><I>T</I><SUB>1</SUB><I>T</I><SUB>2</SU=
+B><SUP>-1</SUP><I>T</I><SUB>3</SUB><SUP>-1</SUP><I>T</I><SUB>4</SUB><SUP>=
+-1</SUP></TD>
+    <TD align=3Dmiddle>1</TD></TR></TBODY></TABLE></CENTER>
+<P>
+<H2><A name=3DT1></A><I>T</I><SUB>1</SUB>: GEI to GEO</H2>
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor05.=
+gif"=20
+align=3Dbottom> </CENTER>
+<P>This matrix corresponds to a rotation in the plane of the Earth's =
+geographic=20
+equator from the First Point of Aries to Greenwich meridian. The =
+rotation angle=20
+<I>theta</I> is the Greenwich mean sidereal time. this can be calculated =
+using=20
+the following formula (<A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">U.S.=20
+Naval Observatory, 1989</A>):=20
+<CENTER><BR><BR><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor06.=
+gif"=20
+align=3Dbottom> </CENTER>where=20
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor07.=
+gif"=20
+align=3Dbottom> </CENTER><BR>with MJD the Modified Julian Date (i.e. the =
+time=20
+measured in days from 00:00 UT on November 17, 1858) Note that=20
+<I>T</I><SUB>0</SUB> is the time in Julian centuries (36525 days) from =
+12:00 UT=20
+on January 1, 2000 (known as epoch 2000.0) to the previous midnight.=20
+<H2><A name=3DT2></A><I>T</I><SUB>2</SUB>: GEI to GSE</H2>
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor08.=
+gif"=20
+align=3Dbottom> </CENTER>
+<P>These two matrices correspond to :=20
+<OL>
+  <LI>rotation from the Earth's equator to the plane of the ecliptic;=20
+  <LI>rotation in the plane of the ecliptic from the First Point of =
+Aries to the=20
+  Earth-Sun direction. </LI></OL>
+<P>These two angles are calculated as follows (<A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">U.S.=20
+Naval Observatory, 1989</A>). First <I>epsilon</I>, the obliquity of the =
+
+ecliptic:=20
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor09.=
+gif"=20
+align=3Dbottom> </CENTER><BR>and then <I>lambda</I><SUB>Sun</SUB>, the =
+Sun's=20
+ecliptic longitude :=20
+<CENTER><BR><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor10.=
+gif"=20
+align=3Dbottom> </CENTER><BR>where <I>M</I> is the Sun's mean anomaly,=20
+<I>LAMBDA</I> its mean longitude and <I>T</I><SUB>0</SUB> was defined in =
+the <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T1">previous</A>=20
+paragraph. Note that, strictly speaking, TDT (Terrestrial Dynamical =
+Time) should=20
+be used here in place of UT, but the difference of about a minute gives =
+a=20
+difference of about 0.0007=B0 in <I>lambda</I><SUB>Sun</SUB>.=20
+<H2><A name=3DT3></A><I>T</I><SUB>3</SUB>: GSE to GSM</H2>
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor11.=
+gif"=20
+align=3Dbottom> </CENTER><BR>where <I>psi</I> is the angle between the =
+GSE=20
+<I>Z</I>-axis and the projection of the magnetic dipole axis on the GSE=20
+<I>Y</I>-<I>Z</I> plane (i.e. the GSM <I>Z</I>-axis) measured positive =
+for=20
+rotations towards the GSE <I>Y</I>-Axis. It can be calculated thus:=20
+<CENTER><BR><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor12.=
+gif"=20
+align=3Dbottom> </CENTER><BR>where <I>psi</I> lies between -90=B0 and =
++90=B0 and the=20
+values of <I>y</I><SUB>e</SUB> and <I>z</I><SUB>e</SUB> are obtained =
+from a unit=20
+vector describing the dipole axis direction in the GSE coordinate =
+system.=20
+Unfortunately, this direction is usually defined in the GEO coordinate =
+system=20
+as:=20
+<CENTER><BR><BR><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor13.=
+gif"=20
+align=3Dbottom> </CENTER><BR>where <I>phi</I> and <I>lambda</I> are the =
+geocentric=20
+latitude and longitude of the dipole North geomagnetic pole. These may =
+be=20
+derived from the first order coefficients of the IGRF (<A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Fraser-Smith,=20
+1987</A>), eventually adjusted to the time of interest. Longitude is =
+given by :=20
+<CENTER><BR><BR><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor14.=
+gif"=20
+align=3Dbottom> </CENTER><BR>where, in practice, <I>lambda</I> must lie =
+in the=20
+fourth quadrant. The latitude is given by:=20
+<CENTER><BR><BR><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor15.=
+gif"=20
+align=3Dbottom> </CENTER><BR>Note that the above formula was erroneous =
+in <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Hapgood=20
+(1991)</A> and in our previous version, but is corrected in <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#References">Hapgood=20
+(1997)</A>.=20
+<P>To obtain <I><B>Q</B></I><SUB>e</SUB> we simply apply matrix =
+arithmetic thus:=20
+
+<CENTER><BR><BR><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor16.=
+gif"=20
+align=3Dbottom> </CENTER><BR>using the matrices defined in <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T1"><I>T</I><SUB>1</SUB></A>=20
+and <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T2"><I>T</I><SUB>2</SUB></A>=20
+and so <I>psi</I> and <I>T</I><SUB>3</SUB> can be determined.=20
+<H2><A name=3DT4></A><I>T</I><SUB>4</SUB>: GSM to SM</H2>
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor17.=
+gif"=20
+align=3Dbottom> </CENTER><BR>where <I>mu</I> is the dipole tilt angle, =
+i.e. the=20
+angle between the GSM <I>Z</I>-axis and the dipole axis. It is positive =
+for the=20
+North dipole pole sunward of GSM <I>Z</I>. It is calculated using:=20
+<CENTER><BR><BR><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor18.=
+gif"=20
+align=3Dbottom> </CENTER><BR>where <I>x</I><SUB>e</SUB>, =
+<I>y</I><SUB>e</SUB> and=20
+<I>z</I><SUB>e</SUB> are defined in section <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T3"><I>T</I><SUB>3</SUB></A>=20
+and <I>mu</I> must lie between -90=B0 and +90=B0.=20
+<H2><A name=3DT5></A><I>T</I><SUB>5</SUB>: GEO to MAG </H2>
+<CENTER><IMG=20
+src=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coor19.=
+gif"=20
+align=3Dbottom> </CENTER><BR>The two rotations are:=20
+<OL>
+  <LI>rotation in the plane of the Earth's equator form the Greenwich =
+meridian=20
+  to the meridian containing the dipole pole;=20
+  <LI>rotation in that meridian from the geographic pole to the dipole =
+pole.=20
+  </LI></OL>
+<P>The angles <I>phi</I> and <I>lambda</I> are defined in section <A=20
+href=3D"http://www.spenvis.oma.be/spenvis/help/background/coortran/coortr=
+an.html#T3"><I>T</I><SUB>3</SUB></A>.=20
+
+<H2><A name=3DReferences></A>References</H2>
+<P>Fraser-Smith, A. C., Centered and Eccentric Geomagnetic Dipoles and =
+Their=20
+Poles, 1600-1985, <I>Rev. Geophys., 25</I>, pp. 1-16, 1987.=20
+<P>Goldstein, H., <I>Classical Mechanics</I>, Addison-Wesley Publ. Co., =
+Inc.,=20
+Reading Massachusetts, 1950.=20
+<P>Hapgood, M. A., Space physics coordinate transformations: A user =
+guide,=20
+<I>Planet. Space Sci., 40 (5)</I>, pp. 711-717, 1992.=20
+<P>Hapgood, M. A., Space physics coordinate transformations: the role of =
+
+precession, <I>Ann. Geophysicae, 13</I>, pp. 713-716, 1995.=20
+<P>Hapgood, M. A., Corrigendum, <I>Planet. Space Sci., 45 (8)</I>, pp. =
+1047,=20
+1997.=20
+<P>Kelso, T. S., <A onclick=3D"return outwin(this,'EXTERNAL')"=20
+href=3D"http://www.celestrak.com/columns/v02n03/">Orbital Coordinate =
+Systems, Part=20
+III</A>, Satellite Times, January/February 1996.=20
+<P>Magnetic and Electric Fields Branch, <I>Coordinate Transformations =
+Used in=20
+OGO Satellite Data Analysis</I>, Goddard Space Flight Center Report,=20
+X-645-70-29, 1970.=20
+<P>Mead, G. D., <I>J. Geophys. Res., 72 (11)</I>, 2737, 1970.=20
+<P>Olson, W. P., <I>Coordinate Transformations Used in Magnetopheric=20
+Physics</I>, McDonnell-Douglas Astronautics Company Paper WD1145, 1970.=20
+<P>Peddie, N. W., International Geomagnetic Reference Field : The Third=20
+Generation, <I>J. Geomag. Geoelectr., 34</I>, pp. 309-326, 1985.=20
+<P>Russell, C. T., Geophysical Coordinate Transformations, <I>Cosmic=20
+Electrodynamics</I>, 2 , pp. 184-196, 1971.=20
+<P>Smart, W, M., <I>Text-Book On Spherical Astronomy</I>, Fourth =
+Edition,=20
+Cambridge Univ. Press, Cambridge, 1944.=20
+<P>U.S. Naval Observatory, <I>Almanac for Computers</I> 1990. Nautical =
+Almanac=20
+Office, U.S. Naval Observatory, Washington, D.C., 1989.=20
+<P>
+<HR>
+<I>Last update: 29 January 2003</I> </BODY></HTML>
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor01.gif
+
+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
+2tsIfdY2HBrxiEhMohKXyMQmOvGJUIxIQAAAOw==
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor02.gif
+
+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
+DKIQh0jEkAQEADs=
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor03.gif
+
+R0lGODlhrgBDAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA464AiAAAQAAAw0MF
+2ABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOAAAPcQABkAAQAMAIvjAeCINABAewAMAwDDwADYckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5BasXD8AgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4HAB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADgDgDGL06SKJ2fA8K51kuf
+452fnsK5CkufKwEAQwHDAjRwCntAAAMMAL7DAvLYCrjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsHDQEBA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAK4A
+QwAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoU6pcybKl
+y5cwYzYEAECmzZsTaeLcyTOhzp5Ag/4MOrNmUaMeh65ESpShUp81n2pkurQpx59SM1JVudWqQJpd
+oX4NS7Vs1gBhT6ZFC/YswrZwH8I1y5ZtVLB1B841qLPv3bpP8bolufbvWr5zBxe8G9io48dj9cZd
+/Hho268E+2JmeTgv17d4I+e1DJlyZqR7M2/uHLIza8qJX4vma1c0VtSlT+sey1gyZsUi02pGm/Is
+atu5/R4kjft4ZMcuhQv+DBpw7NC1qyvfzjQ1Z69WZf4HB99UfGvyQs2DVI++PUb27uPnlE9/fP37
+HeHj308bP3DeTon330j64fSfcgoNuFl0BbZ3W34wKbgTdkXNdhp7Db53mGACxibXZL75xdhfkl2m
+W1yXNUYiV4MZ1mFictlFF3GjJQeib8Q96BlgCxYHXG5qgUYacjhKZaKOSkFH43cJKunQdR2+lR2S
+uFn4G4I6jrYji01uWZJxehHpGYKLhUlliD0uVZiJKElnHZQlagcldt61xJqE/MUok5t45vmkTdL1
+6WeAgA5qKEQZHipfooq6x2ij6D0KKXiSUipoeZMi5uV9lZYH5H6dtlkmbEWG+tKGbB5V50KrWufq
+q2EyXipUhYh6+GeqNQ6JFW8U8ueaqU5Vh+ObVW7KKavqwfmhsLNpFlqWea6Z5pdkNYfmaiv6GWiv
+X3bJ3XPWHgpspjzJSm6k4557k7nqesVuu/DGK++89NZr77345qvvSQEBADs=
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor04.gif
+
+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
+t+/++/CPFBAAOw==
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/ellips.gif
+
+R0lGODlhpAGQAfcJAAAAAIAAAACAAICAAAAAgIAAgACAgICAgAQEBPz8/AAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAAkALAAAAACkAZAB
+AAj/ABMIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3Mmzp8+fQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLNq3cq1q9evYMOK
+HUu2rNmzaNOqXcu2rdu3cOPKnUu3rt27ePPq3cu3r9+/gAMLHkw4LQIECA9fRDxQceHHbg8zLuiY
+YuUElyFrPit5cmPPEi9n3kxabGeDoyGKBl26tVfFmUd39gx7tuPaqV3rnlqbMmjbk4Gfxgx8t/Gq
+t2krD55cOUHJn1kfn660snXmv3s/d76dunem1z+L/0eNODb38d/TG10tMDx54r67y1dPX2js9swP
+akcPf379/z2Z19+A3QnIH4EAPpQbSQsKB11GovlnlWwPEpddedlJuGCCCW0oUoMOSjeRe/hpReFq
+2JXon4EcKigigy8mFqNF7GWVWoX4zXbgcCy22JCHIQEpIUc1YpXbiUVGp+KBPioEpI7kIZmhi/rh
+CN9w40GJ24xNbuZhcdFhaaGYQi4ZJpbCyaclmF0at2GFcKaIIIkL3XhenPmZiWebbr5oJXQGsiik
+ne/NmSeBPfJZGohVIthhnD9KF6KZA9KZqKJe+ikphk6y+aSIkxqKXpKOYgoZo++9+SCdjcrYaXxL
+kv9apql+oRqfrbHGqOqr81k6Ja2ZPnqhqMSWyuR2Uwp6aLHAnqrrdYeuutyxlFYZ7a++wioVl82i
+5CCyZNoGLpqghrgcudpCy9ilTc3aLYxs5minedJWK2+a4GqbK7KUujuUle8GTBSUAhdsn5gGJ7xT
+vAo3bBPDDkdME7cSV7wSxRZnbBLGGnccpMcgs8RxyCRjNHLJKI+Y8sognczyy07CLLPJM9dsmc04
+q5bzzgy5zDPLPv+cctAa+7sy0SYjbC9pAPOMdEXfDsl00zs/PSK9UjurtNMqNQ1paxBznZKtW1o7
+b4YEr/gnhlbHlLbQbVPJa9T3okgwvrDiLe5SVOf/HLdDX65bpLK9yrostE6tK/RzY8+YXKG4qpjo
+43n/PZPlRTdep+CQex01haN+jjlMo2dc+qObV6uu3XuDniu+RvN0esWzt4q6o/TWe3vh1C5dVO0S
+A1+o7a5H6Xup+xl7/L+LJ9b1vEyiura9yU+vPPPN63cx1kqGzm+O3ltr/L58Z6/99gzTPebad5e7
+afvlm4+aS2+XuHX9Y+pLmbC/IiV88DP7HwBlJsCIFbBFB3RYAhO0QIU1sD4PTFgE1TPBglXQOxcU
+WAans8F3dXA3H+xWCL1FlhECy4QbGwsKabXCkrQwhfLr2Vde6MIYyvA1YKEhpnT4oRna8IY47AoP
+/xU1xJYF8YcxyyFXisgnJn7EiRBCIhB9aCMpTvGIV4Fil7TYES6qzIp1UqGRwBhG02SRjGUMixd1
+hsYOlRA5bUyiGamyxibVcSN3lGMczyfGbe3RjW+MSh59NMgoCvKPgAxk4hCZyD4ukpF8dCR4IOk8
+sxSykHbkTLsoWUlLxo+T89NkdUAZSUUeBZNbNExSUJlJtKyRla0U5XpI2UlZYo+WoXTlLHGZS1sG
+BZapVAsUgRlLXdqHl7X0pU+IWUxj/oSZzVTmwpCZTGfKjprVlCZOoBlNbT4Mm9n05sTAWUpVTpOc
+vRTmNdG5v8johJttgifNtsnOcprzJvIMpju/Wf/PdK5lhPnUZ1tCGFCBstFENSloNwEX0A4qdKFy
+m9A4+2nP0MAzgw+FqEXh6DaKhhNqzKxgRjUKUj++ZKSEDBIrJ4jSlH4IlRFsKQJdeMmWyHSmG8vj
+A2/KoQPGDp8X82gaSei/oAq1kd7yYgJ5ilORcdGnR9WjUwdG1Kh+VHO/PAlTXSqTn9oUhla96lSX
+WcOwIvVyNBTeVrmKzxfWbq1s3eYK32pWqebEqwz6WF3P+k56GnGvYn0YQf8K2Iou7IOjgytJ37lB
+zCl2sYftaBcLy9eDkY5IhTWXZp8ZU8ziUrPq82eUQCvSBsbtsXgJ1WSJZK6cGnWelA1sF8MGIaj/
+wja2hk0qXl0FVhrhtrI23Zpl/oc01MaTsbttT1mh9lvgJrRvkcrrzZor2+dCd3dPZC51cxug6w5v
+taHZbnW7693lTfeg4m1n4rybXPUqKL3cVc3expu0XWmEbT+Cb3zlyznb6bZc9S2vcXfI2iG1dzGE
+utp8satf5eLxPI2ZWPH4K1zGHZiifyMVZtraP4ayd1npzTCIN8xY97qIS6y5MDlPK6eDjbhnjgOw
+eFlcYaDo7r121V9sWWxeGyfPt9H9LY+v9ztOLUa+uG0bq8Bj5C9GRMWUVDKE10tk+po4rFLOGpOr
+zLjz7tVqOCqv/5o81CdTtrhpE/OYiRy0AX/H/80MNZZX4UwdOsdZNto9MintfOIpo7ekoOTzk2+T
+ZxpB2W/z1ZunFp1oRrev0ZB+tKTJhT/A1ZaWgh6u0cB8aL89pmw4RvBnC2O3/CaNl5lG8mjLPFxU
+D6Y8/LMyb0cdGFiT2Gyi3airAaO4W8vIOpdGZqrLGBwYAyrYneo0yYadyGLnt72fqrT5mM1H2vS5
+vrwCnxSp7V5r62zO+ftuj8WmF29HeNBcTnaH0121vfzmyndGM+XSpeaXcdvX+J7nbl/cnBoHMC8p
+9si8Dd0oFC2O2gEnbHIFZL2fMVtS+w0yu8UHvgm3uy4Qj7ile2dsHmU83P+mC6hkXeY5L9k39f+7
+9y7lMnKSp07Lqm5kw0EmaD85F8hdFvW5satsyJbF5jfHOccjladwwZx2cdFVjvHoX4t6XFwn7xid
+lb70Bzc9vPyBX9BF+BaqX/bqrab3yxW4z633Vse67h50601gtjguodnWtLbZrPJzqpPVGkc22Pss
+rWfVva93rzq8RxLjUy8vciwMvOBzXlUGYz1wmgqYYrmFMdNKHNCxFvcJrbl4xo9t42Hn38ybtVaK
+cayzlzdztj1uQU+C3tRfjfNsL8T2nv481K8XWcz1/j0NmvKKZN095scH8rar8c82Tnvoh0fbplIR
+98dUvvC/Z3AiHh/5sJes9A1vcZ+bFPvAP+n/8A3d36P/Z6Qn89lgx3816vk538fJqMvUD1SCyx15
+1mZXX9T80PkXeqL2F4CFgy6kVnlL5GWqV396JoCVEnWCMSsFRX//B3eGd38Wciw993Onh1AImIB+
+VYFOR2l7VysbOEYduElWZ4HuN3d/4S7y1GYclYLYxny1Fxn4hXdQQTTc5FhPk2D5whes13mjNIFO
+ZncFtnzdQ3wA936el4MLKHRGeIRYh3by4m5MuHOHBIVEeFcqVVsp5m9Jt26D90lbOIXB1zJohnJf
+mIG88W44OIRaWIYf2IXtdy9mU4M5dIVYyGH+AmZMl1VceIGzJohwESHh11UtdogeeFvPdFhH//KF
+YTh0ewiALGh2iliEySc73ceGTyFtuUY6kPiGi4hFyIWBemgXJtR9Y2iGz0de+Ndlfwd/bhOKLpd3
+MRggK1g3dZeKtPiJmGhIv/Mv2II45SZXVCiLJ8iI0fdLxMgsd8GL5uaLvwiMwehiImh+XWeMFWY5
+pdODX+diOsaJZ9RW2XdfhIWErzVmw1KM5CiKyUiN26d7q9SLqWWMQsiKnvWO6TgwawiE9liL96iP
+l9g1q6R5z/iP0iiH8IIm/MRkf8dE3Ug/CzaH81grgChw4jeJCgiH/tiI5/iRlviNNsNDp6NW5bhO
+I3mG2SVdAXk5noaSK8mSAEk/OONWhHd2Jv9GkjUZhRiJk2cijvlIQIDXQz65PngYeyG3kSBJlE6Y
+lBR4k+wolA3JlFFpb1NJlQDnlNoHlY3XlFbpkkWJlZ0olVvJlV3plUfTVWe5XN+XliIpk2s5lkDz
+lnCpVRI1lzQZl2zJG3gpj3pZl1k4NEhpl6TWl593mJ/mloj5lxYpmItJmHl5lyhjWwSZkZJZMgVk
+eXTJl5MJmZVpmZcZMsQ1mJEZmjS3l49Jmrd4mmb5mZvJmcvWmq4JmqYpdWKZmkyDmXpVmmCjmzGp
+movim+DFm68Jm6wZlMBJm+N4nOZYls5ZmxaTYWp5lcvpMacFlk9ZRaLZnM/ZnatpOvConNP/uRWx
+6JFxmJzeSUfbeZ4G2ZO5V2vr2YEydpsteZDWSYTzuZTu2JG2OY2yCDzpx5jGCZ74qJHIaI4jk5mk
+GJ0FaqB0xWWeiJwcmDngtz6PWXhktpsH2J/vKR4ZKptUV34aSp73aWktJ6L0KWMo+pskyqHE1ior
+qp/wR2gTJ5Dq6aIyBznj9oSiRaOciH4lKlWhGKPuWU0+Wp6r6EB4lyw7qpAOliVP+oBBaljc0Wuy
+WU6wUaMiN6WriDZa2qBYCobcuaEUmpC0Z5IdeqBF2qJl2oT2NJrQZ6AyWp2jhTeAiXEJGaVyOpwn
+qaZ8yqZ32HyzxZ96mmNoin0K2ortmVSE/1qCSTqmHZqoC4qNhLeLe2qkd7qfmUqnx6iGDag/aYYw
+oUqIfeR/s5mmAnqjg/hrjaYvjnYueHKUhySBqTqTWel43/U14bOrc9d3hgGDuImqp6JuYFI8hMM7
+SVhxbkVazNqszvqs0Bqt0jqt1Fqt1nqt0EqsrUOL+keAKwiUVBVocXd1rMI6uvqK4HpLUTaumleu
+50I+3/pYSMp5nYo7IOauWbcpX8qpiPQsY8ern4qslQgo8rpn7JqrzXiu50qINyZOaBRjoaI+dqpo
+5vpiksRIECuxBOuprPM6aniKitqvaAhB4vpE86qMf9SNJ8ujImuyJMtJK0uRLdumGMulv5r6YwNl
+s5whOHwWszJrSSDrejgKtPXqsEoqTEErtDSrgUVrtBKEtE2rtATqStPCcsxJtOFmZz6rlEDLs1ob
+nzM7tHG0tVw7tmCbsme7R2RLnW20tmz7sLFZs2nbtnGLtnWrtsKJt3drtnsLt3lLtw2WHm4buANJ
+uIZ7uIibuIq7uIzbuI77uJAbuZI7uZRbuZZ7uZibuZorVAEBADs=
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/ellips2.gif
+
+R0lGODlhpAGQAfcKAAAAAIAAAACAAICAAAAAgIAAgACAgICAgAQEBPwEBPz8/AAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAMDAwP8AAAD/AP//AAAA//8A/wD//////yH5BAEAAAoALAAAAACkAZAB
+AAj/ABUIHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3Mmzp8+fQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLNq3cq1q9evYMOK
+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
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coortrans.gif
+
+R0lGODlhgAKQAfcAAAAAAP8A/wAA/wD//wD/AP//AP8AAH9/f/r6+vj4+Pb29vT09PLy8vDw8O7u
+7uzs7Orq6ujo6Obm5uTk5OLi4uDg4N7e3tzc3Nra2tjY2NfX19XV1dPT09HR0c/Pz83NzcvLy8nJ
+ycfHx8XFxcPDw8HBwb+/v729vbu7u7m5ube3t7W1tbS0tLKysrCwsK6urqysrKqqqqioqKampqSk
+pKKioqCgoJ6enpycnJqampiYmJaWlpSUlJKSkpGRkY+Pj42NjYuLi4mJiYeHh4WFhYODg4GBgX9/
+f319fXt7e3l5eXd3d3V1dXNzc3FxcXBwcG5ubmxsbGpqamhoaGZmZmRkZGJiYmBgYF5eXlxcXFpa
+WlhYWFZWVlRUVFJSUlBQUE5OTk1NTUtLS0lJSUdHR0VFRUNDQ0FBQT8/Pz09PTs7Ozk5OTc3NzU1
+NTMzMzExMS8vLy0tLSsrKyoqKigoKCYmJiQkJCIiIiAgIB4eHhwcHBoaGhgYGBYWFhQUFBISEhAQ
+EA4ODgwMDAoKCgoBCw4AFBMAHhgAJxwAMSEAOyUARCkATi4AVzIAYTYAazoAdD4AfkIAh0YAkUoA
+m04ApFIArlYAt1kAwV0Ay2AA1GQA3mcA52sA/W4A/XEA/XQA/XcB/QAJ/QAS/QAb/QAk/QAt/QA2
+/QA//QBI/QBR/QBa/QBj/QBs/QB1/QB+/QCG/QCP/QCY/QCh/QCq/QCz/QC8/QDF/QDO/QDX/QDg
+/QDp/QD91wD9swD9jwD9bAD9SAD9JAH9AQj9ABD9ABj9ACD9ACj9AC/9ADf9AD/9AEf9AE/9AFb9
+AF79AGb9AG79AHb9AH79AIX9AI39AJX9AJ39AKX9AKz9ALT9ALz9AMT9AMz9ANP9ANv9AOP9AOv9
+APrvAPjjAPfXAPbLAPS/APOzAPKnAPCbAO+PAO6DAO14AOtsAOpgAOlUAOdIAOY8AOUwAOQkAOIY
+AOEMAOABAN4AAN0AANwAANsBAdkaGtg0NNdOTtVnZ9SBgdObm////yH5BAEAAP8ALAAAAACAApAB
+QAj/AP8JHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mixo8ePIEOKHEmypMmTKFOqXMmypcuX
+MGPKnEmzps2bOHPq3Mmzp8+fQIMKHUq0qNGjSJMqXcq0qdOnUKNKnUq1qtWrWLNq3cq1q9evYMOK
+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
+yZ8EyqAUyqEHJMqipMaAAAA7
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor05.gif
+
+R0lGODlhXAAcAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAAFwAAxwFTQBAAAALAABeAAmI
+AXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMMDLTj42iIiHsCAAPA
+ALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAETndLC91/T18DAwJ6d
+nTT894N/1wDAAABvAOIAAGEQAB8AAQAMAIvjAOCI4wDDAADYBUAAQAsACFwB+hAE+AkACEkATGhs
+EHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6e///ACIimMzMAAB7AgAAwAGY
+AHwAbsAAwJ4BCTRpwKvXR8AAAJ4BADR5BqsXgcAgAgVDwPVvAMBsb8BvAAVyAPUAEMQgAMAoAPVh
+AMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAADAACzAAA4/AB7QAAD
+CwCzvAE4EAA4AQIAADUBAnp6eiIiIszMzAAJQADhDgD6L07J0J2fA8K51kuf452fnsK5CkufKwEA
+HAHDADRwA3tAAAMMAL7DAPLYTbjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFuEAAAQAAAzCcBEAAB
+NAALCwC8vAAQEC4BAABsAAvQDQHgA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAFwA
+HAAACNEAAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbIjAJMnIQJYyZJl
+yJUEXTZsKTPlQ5s4X8Y8CZNhzwA9bc4c+FOoSaIpfyrEKdToUqREQRZN6tQg04JVfWZFSLPlwqY0
+bzpV6tDoVoFdZXJl6rVs1rMHlZLNCBYtXKhosUYkezat2rhXgd4VHFOvSrMfr05dm3On2L+DJU6t
+CzhsYYyRJX+dOFdyZ8ybNZes+Bkoxcyj46JMzbq169ewY8ueTbu27Y0BAQA7
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor06.gif
+
+R0lGODlhGgETAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAEA4xoAiAAAQAAAwxMF
+2ABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOMAAHsQAJ8AAQAMAIvjAeCINABAewAMAwDDwADYckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5B6sXOsAgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADjDgA9UU7DWJ2fA8K51kuf
+452fnsK5CkufKwEAEwHDAzRwTntAAAMMAL7DA/LYTrjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsIDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAABoB
+EwAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoU6pcybKl
+y5cMAcj8CKCgzJoDbyrEmZOnQJ8SdRKcOZToT6MBhNo0CPQo0JtQkVL0ybNpUqlJlxatijCq06he
+Ic7EalHp1bNnyf4smvWq1aEJcRod2xPtWLk1sYJ1q/Mu3LWAd8ZFGpat1KqE8+KFqjWnXbxiIXek
+6ritZZuIA18++Nbu0cBcLcut/Ldt6NCiUcddSHm15sOlR2uenbfubNaSOWb+ansr6cZdY8pmy7s4
+WtC1P88dPjcm69JMd5tN3XM39KzWO3MuHB2sduTVrf47Xmz2u/m7jI+n59sbOODl0cU+D/9U+ubs
+rd3Xn7h3sHfnnxkHm2mqmSecegGyJ6BVTeHHVEQGkrafcrT11hxn+n3XVW66WahUYu9l191/G8K3
+3Ini/QZegiy6tRWJ7rWHYoUJXvjgdWrh1uKL/QlW44dUeSeij/EtqB6Q8N0YW4ogqhXhkcTxVZiD
+t7E4IYSKgZQfcy2iZmNw29Vl33uVncbklkWGCKZrCHpG429evpVke5FpyF96fqXFIWN5chejmJCZ
+GOigP2JmWJAf7ljlV+RJlidvYT2a46NS2glTgxAGNd91t2HKpoqbueYklkRm+ienMKWqakuUrurq
+qxawxrqapbLWauutJNGK66689uqrrQEBADs=
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor07.gif
+
+R0lGODlhoQAsAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA46EAiAAAQAAAwywF
+2ABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOQAAAUQAEkAAQAMAIvjAeCINABAewAMAwDDwADYckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5B6sXOsAgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADjDgDYUU71GJ2fA8K51kuf
+452fnsK5CkufKwEALAHDATRw43tAAAMMAL7DAfLY47jjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsNDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAKEA
+LAAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoU6pcyXIj
+gJcACsIcCLOmzZgUcQbQuZOgTp49ZR782TLjS5lAdxKlmdShTYEzmUalabDp06IXj0qtupTpxKZB
+oSLU6rUqVpdkp5YNCxXsQrA8rZJVavWsxqg1uVL16VbhVbFS07KNKVet3YiECSvVC3gtxK6D9+Jc
+WrfxYcSLEzNmu5jvTbeCh+Jta1n0ZYmTU0uG3Pnxz65pP8vm6/h0Q9WdtYYmjRry673AgR/djVF2
+X4t5h4/W/bni1ed5A0tnbhi5cKxzO2Y3jfw4Zt6cbcWLP/m79Pjz5L0jbY6+/XfX7N3Lfxt3e3Hj
++PPr38+/P360XtnX1mzzFTgWZeoZqGBCz4G34IPWtXaaYbu9BptoCbaknHi4ZTYgc7lFR5uAlynG
+4WS8oUgbaX2xNl6GLOlm1ooeHlgbhEXNdNOHQFGXXWw4lqgZYKzJWBqQQR4m4o/lIUUjiUmSFNuU
+5VHnGJJRqgSkhQiKFZqR4WWZXogh6ggdXqpBKaaUM9642VBrxinnnHTWaeedeOap55589unnnxsF
+BAA7
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor08.gif
+
+R0lGODlhmgAaAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA45oAiAAAQAAAxBoF
+PABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOQAAJQQAIAAAQAMAIvjAeCINABAewAMAwDFwABUckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5CKsXrMAgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADkDgBhUU5WGJ2fA8K51kuf
+452fnsK5CkufKwEAGgHDATRwzntAAAMMAL7DAfLszrjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsNDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAJoA
+GgAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoAZgEoJJi
+y40sIbKcSVNkTIEzMdLMGeBlxJsSa/aM6ZPhy6M2CwKtCPRm0YdPZSLFCXVg06QEl7q06jOqUYtO
+lTo8OvWj1qFguYpF6PXsz7NeFbqVu5Nnwqhz3xqE27PvWq5xD7rNyzZoXcKDA49tu1eo2sdS8UpV
+SngiXruWy1Jt/LSrY6OYrU5WO/dwaMqom55m2/UvYK2q9aJ1DTqryspBbYv2u7n0Vd2CC+P0TBfy
+8MWnFWc+Dnit7520s7J+PZtzy8/KG+K2LJf5btk/7zsyzb6QqMfARTVX5S6cPdjPGhFL5x1++d60
+KN2z3l58K0f++QUo4IAEFmjggQgmqOCCDDbo4IMQRthRQAA7
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor09.gif
+
+R0lGODlhlgARAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA45YAiAAAQAAAxBEF
+PABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOUAAAcQAG0AAQAMAIvjAeCINABAewAMAwDEwAA8ckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5CKsXrMAgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADkDgDlUU4cGJ2fA8K51kuf
+452fnsK5CkufKwEAEQHDATRwwntAAAMMAL7EAfJ4wrjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsNDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAJYA
+EQAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM0IEwJEgRwAKQQ786LEjRZIHUY4sqHLk
+x5ciNVrsaFKkyZQrA9QEeXMjz5guddrsOZRlTp0yZ8akaRPhzZpCj26UKnCpx5JVr1a1mvTkUqA9
+XQLdGpWsz6BoyyI1SDTt2IYt2cKM6xRs2KxjST59u3AvVrNrS/JVK/Gu3LmDWeZ921RxVqGJ66ZV
++zTlYLuRBRvGaJhoY8dzNcP8S9jvY7moyW523BfxarMqPSOeHPihacCVcTPm+pq2TKh+wxZVDXjq
+Y6inA992WzwkXaUvVQ/fyrRs9InVrf+kvpMwZOS9uyEat826YuTMyZ17F8++vXvy6N/Ln88+Pv37
++PPr388fYkAAOw==
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor10.gif
+
+R0lGODlhXwFCAPcAAAAAAP///4tFAeACe0AAAA0AACoAA8ABIQCAAAEAAF8AAEIFBABAQAALCABe
+9AmIEHt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/gkAAEkAAGgYJHtAQAMMDLTj42iIiHsCAAPA
+ALMBADjRBAICAMDAAAACAW41A3p7ev8A/yKYIswAzAB7YQAALQCYaQEAYQDAwAETndLC91/T18DA
+wJ6dnTT894N/1wACAADAAABvAQIAccAALwIQbDoAYQBAdAAMZYvjeOCILwBAewAMAwDEuwA8MEAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/AAMCwDjvAGIELkAABAEAAUGAnp6e///
+ACIimMzMAAB7ewGYmHwAAMAAwJ4BCTRpwKvXR54BnzR5UqsXU8AgAgVDwPVvAMBsbsBvAAVyAPUA
+EMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAADAwCz
+uwA4HAADAACzAAE4AQA4BAIAAMAAADUBCHp6eiIiIszMzAAJQADlDgCK3E51mJ2fA8K51kuf452f
+nsK5CkufKwAAJAAAAQAAgAAAAwEAHQBAAQALewHDAzRwIXtAAQMMe77DA/LsIbjjZNiIEAAMDQDx
+KgHwwAACQADACgAA1AFuEAAAQAAAzCcBEAAANAALCwC8vAAQEC4AAAsNDQEdA58JnejA929H15+d
+nej8929/1wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAF8B
+QgAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoU6pcybKl
+y5cwY8qcSbOmzZs4c+rcybOnz59AgwodSrSo0aNIkypdyrSp06cKAUgtKHUqyqoDAWQVqDVh1wBf
+wVrlOlYiVq5byYY9qxYh269wy6qtynZiXYJ3wVKlOjYsXrpz6QpeKlduya5WB4sF/Pet1sSP/eL1
+SjZwZchiL0ueCvksZ79w01J2G9ng571ts5ZefBd05teGi5bNSzIxWtR6caveHdqtV8S3d6Pt+zr3
+5NubRRsnHnW0cdFrXUMPnnxyXOVGHzduaft4cezFT/4/1006eOW5qvtG581X+PLeztufn98Zt/rr
+5LXTV7paP0TBjP3XWWEHKfaXZb5FNeBqrKWHH32RYaVegZLFd+B84QEnXYbedThebEeVxplZAIK4
+UHfPVbicaYgFaBpDKAK3WG4SpgbhihO+mJ6F7s12nYzQPajihhjylxmDLBUG328X0nhfiUweCCBr
+n7mYo4Pu9chgiXVdmSGK1AmZIHYmEtViixFxWaZ8De7HopY2gjhkXF6OZydodOaZpZtylofhkwYK
+uWSTH6ooW2qGivRkkFLCZ1ud4EHIHJpOIkdpaJNGOumQzl1Kpm6OzrnnmkAxFmGiIYkX6HpUBoam
+if6GqmqqY4ueJ6tnSLZaaYFMYnZkdFViBilvwNIG1Up46kihQ6g2y2aRSjZHqHkKfuehsrzahW22
+x3br7Ub+fSvuuOReW+656Kar7rrstuvuu/DGK++89NZr7734hojqYT4CKy2hxjbUmr87FkyenTPy
+BWVFxuZFZMII66qmi0mROpKssOXq4Yi/8pjWhK+GrBmLgE0p3nTUbtvomwTa2DGVD/dHKX8Wp/rj
+x5F+192g5trq84pA89wbpmK66TF1yrKq3NDguVa0kTV/BLKGDxpc6J45X5gselzrzN7IRjN3tJc5
+tqZl1dT6J3bF1gq4cJpnnmyY2oMNG/GOJuvZdf6fB8u5b85k4xfue1lWGPPfQp1M4tsCWlYnkMTZ
+va/cX+rd9p3LcguxyjfCCWSYPY6ZNuJB8azSpo5pfbagXP5Wa5uwx1bdtJ7nOSWcq6eNe8SHP4U2
+s2rCHWfqDkpoOd9v7k3r8YZvCyafnGaus+0BCgr4Ws/SjPVJj95sKahf3y3qZeFDjjSHAH8e+uXi
+f2z+xt793vn22Q2IrGIY+8p1/rH2KvLL/JufpAbmmSJlDWMvQw/+thQrJN0uXxyZ3UMkqLkKYq5v
+/8oajDSWsoP1DEac+yAERxiTwZHwhCg8UQpXyMIWuvCFMIyhDGdIwxracF6kQ1fUbrg4m+xQdP7i
+a9n5ekghgoFKSYyrmRKRmMPtFNGJLovSiZCosCbSDiakStR9ylOf4tlFYwG0jwNRpsEr+ol+BwSj
+zDLGPjOubFo/TN5MAqZBChotRRcRGs5GR8anGRAj/VLhmGbHQKDlsWqBPCRNOPjBuUlvbVZsko+w
+JCnhhKpprktTitY0vulRMnaGW2LojMiwSJLsgRNsYwcNGMr1Iahxf2LeVmwnPQv+yniKG46GQPhI
+pU3ycac61eVmA5u7wfKQjBMYI9MYwjMtrYy9lCTxIEcx83Qpc2tsm4hM2ExEehN9lmTjMLF3GlM2
+xnJXaVrwaDen6p0RZl36pvKKaamtJTCUvuTS3yy1I7t1CvBK+mOirWY2qiOpUpn0XGURk8lLVTYw
+hB2y3jEnOU9/Rut7HYyQOFuGq4ayiaIbfdyM8rk1GXW0lLP0oKLkx8wjYhR0Cv2Xp5CDSXBCT1P7
+HChqCuhR+/xsV++LX0hVV8+YbtCJcQSk/YCYvpNWb1Z09J9OhYWnchbLpKYL1sT2B7ujAVBkt8vl
+LScWt2DpMqkZNCYW0zrFo1pEixBVaXv06RJneVWEicOrTtDaLbXxkHtR5Yk5+4rGv95rsN7iq2EX
+y9jGOvaxkI2sZCdL2cpa9rKYzaxmN3vCgAAAOw==
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor11.gif
+
+R0lGODlhawAcAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA42sAiAAAQAAAxBwF
+PABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOYAAHYQAKwAAQAMAIvjAeCINABAewAMAwDEwABkckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5CqsX18AgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADmDgBHUU6zGJ2fA8K51kuf
+452fnsK5CkufKwEAHAHDATRwQXtAAAMMAL7EAfJkQbjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsNDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAGsA
+HAAACOgAAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMUAaAsCEDl
+w5YwY4ZsKdGlQ5kBYAq02dCmz5kTefb8OVCoQp9EPxrtGZFmToNLDyItCtIpxKgLdUKtiVVqTJwJ
+u7KkqdLqUIRmmRZNO/YrW4JvpeYsu/NqXLFj1z7lKNSt1r0u8a69a3crWr9xdwpWDHix07eLGQ/2
+GJls3blHp+Yd+lfyxsRQwd7VCvZyyrKRXxZmaRE0Q7Kpb16VWzE22qqVDddeWZO3Xt/AgwsfTry4
+8ePIkytfzjAgADs=
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor12.gif
+
+R0lGODlheAAsAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA43gAiAAAQAAAxCwF
+PABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOcAAGYQAIoAAQAMAIvjAeCINABAewAMAwDEwAA8ckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5C6sXkMAgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADnDgAsUU4hGJ2fA8K51kuf
+452fnsK5CkufKwEALAHDATRwaHtAAAMMAL7DAfLsaLjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsNDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAHgA
+LAAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoU6rsCKBl
+AJcrY2YE8JImTJk4LdKsmbPnRJg7fQp16BLozaFICbZcyjNoSKdJf9pkOhIqTqtEpwrECpLrSq8L
+lwYtWvUp2JdKnR5FylRrQrFwFcadq5Vu27sy626VC5cqwqI7jW4NPNat4Kt70bKkejht2sNH+/b1
+SJbnX8lrCwIezFmzzaaEO8esfFaiUcNjOTPebDmvWMqYBZ+OLTln5qi4B5bOPXQ379/Agwvn63c4
+W9/GUd5OfrUwcuYfTyuGrpI2dZ/Pr1f9rL279+/gwwyLH0++vPnz6NOjDAgAOw==
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor13.gif
+
+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
+rPDCDDfs8MMQR3xRQAA7
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor14.gif
+
+R0lGODlhdgAvAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA43YAiAAAQAAAxC8F
+PABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOkAAAkQAOcAAQAMAIvjAeCINABAewAMAwDEwAA8ckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5DKsXScAgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADoDgDFUU5oGJ2fA8K51kuf
+452fnsK5CkufKwEALwHDATRwYntAAAMMAL7EAfJkYrjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsNDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAHYA
+LwAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLFjRQAeQ4q8CADkyJMoDZZUmbJl
+S5MEYbqc2XFlQZk0c2K0GVOnz50lbQb9SXSiSZ5Fk0IUilOpU4VMBzZ9SjXAUZBYp1Z1ehWmVpJI
+t2r8CpYq2Y8iwxY9S5HtR7cS1bIUGFbuUrtAFwbdi9fqXr9D/QL+Ozjryr4uEfMljPDwVamPkTqm
++3htYI6EedbFmbky5cWLMWdNCPrywcmCKd/Eqjpqap+aRX9+Hftw6qGuGcJ9KHm37tKaR/8FHlqv
+b7FJjyMnqnw5bOfQ6UZ/ynf2dMuqr1M/KlV78uyIvSmj9Nxc/FjG5c1vlJle/dvXVt3nZAxYvv37
++PPr38+/v///AAYo4EkBAQA7
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor15.gif
+
+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
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor16.gif
+
+R0lGODlhdQAaAPcAAAAAAP///2FF9WUCwC8AwGIABWEA9XIBxHSAQHEADC8A42wAiGEAQHQADGUA
+xHgFPC9AAGMLAG9eAG+IAHJ7AGQBADExADa4IC57AGcBAGkxAGbsAyd7AD8BAAAxACDEAEAAQAkA
+CEkA9GgYEHtAQAMMDLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41D3p7ev8A/yKYIswAzAB7
+ewCYmAEAAADAwAETndLC91/T18DAwJ6dnTT894N/1wDAAABvAAkAAOoAAJcQAEYAAQBAAAAMAIvj
+AeCINABAewAMAwDEwAA8cgsADFwB4xAEiAkADEkAxGhsPHsAAAMAADhSAwAfIAABAABQ/QDjswGI
+OLkAixAE4AAAAQUGDHp6e///ACIimMzMAAGYmHwAAJ4JCTTAwKtHRzT3/KvXf8AgAgVDwPVvAMBs
+bsBvAAVyAPUAEMQBAMAAQAUADPUA48gDiHsAQAEADCoAw4BN7EBAQAwMDOPjxYiI4AkMCknx1Gjw
+wLMAADgB9gAALQA8AgB7QAADDACz4wE4iACLAADgBAIAQMAADAIA4zUAiHp6eiIiIszMzAAJQADq
+DgB+UU5eGJ2fncK590uf1wEAGgALAAHDATRwX3tAAAMMAL7DAfLsX7jj8diI8ABAQAAMDADx4wHw
+iAFuAyftAgDrDgDjAACIbC4EcwsLDQAACQAA6gAAfgMBXp8JnejA929H15+dnej8929/1wAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAHUA
+GgAACPsAAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLEjgI4gQ2YE8FGkyZMQS6IUSLKl
+SpMuYx6M6VLhy4E0R74kiVKlz5k4g+ZkaZAnzpsSWxY0GtLnz6VHgya8qZQg04lXWSLd6FSq1ahE
+EVbVWnTrw6wB0E6lqbasw7YM0cJtKNfsTLZ2vx41m3dhXYt/e3YNjBXp3LhZjY4tixdxVMJh6SZ2
+engpW7J9Kcq9azVz56FpP1a2LDP06JQ1we696vlz6tBpAZdeiZluRZmLC/PcvXK2zdtVX2s+TVus
+7JJPiyv/rHF36+XQo0ufTr269evYs2vfzt16QAA7
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor17.gif
+
+R0lGODlhagAdAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA42oAiAAAQAAAxB0F
+PABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOsAADkQAKYAAQAMAIvjAeCINABAewAMAwDFwACQckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5D6sXLcAgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADrDgAUUU5JGJ2fA8K51kuf
+452fnsK5CkufKwEAHQHDATRwPntAAAMMAL7FAfKQPrjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsNDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAGoA
+HQAACNsAAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoU6IEkBIA
+y4guY8oU6dLjzIExA7yEuLMnzZA1cQrlidMnUKBGhzrsmdTmTqcCn0alGPShzKsLpSoMWjVrzoJd
+rRrUCvbqV4Rht74kizbtVJhS3V58avZsU68J2aolePZg3b5j9ZaNKngwWoldWRamunQtV8F65bb9
+uvajZL6KKbO9OXbjYsYMI0+8zJM06L2HEascXVjuZ7+rR7d8Hbu27du4c+vezbu3798lAwIAOw==
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor18.gif
+
+R0lGODlhlAAtAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA45QAiAAAQAAAxC0F
+PABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOsAAMEQAGwAAQAMAIvjAeCINABAewAMAwDEwAA8ckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5D6sX5sAgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADrDgCZUU4nGJ2fA8K51kuf
+452fnsK5CkufKwEALQHDATRwvHtAAAMMAL7DAfLsvLjjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsNDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAJQA
+LQAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoOwJYyTKl
+y5cQAQRYOROmzZsJaeLcybMmwZY9g4qkKbMmUaFIP7KUWXRp0qcji0JFKdXm0aklq2LdelBnzp9V
+vXK9qFOswaVoFaZdy7RtS7ZEtY5V23QhWqc52wos27TvwLh7/f69S7iw4cOI5TaUqhgjXr5nwwKF
+PJchZYSH6c4UbHazUb2eQ9tNTLo03ph9G1PkC9qr38mARasdG7ezRcSBQ5s+/RWz7dW/7Va+7Vt2
+xdgPgw8XXlx5ctDPl09U/bd3ROrSOWIPjr1r9+yOR3n7PHudKfihg/Wm7Tq68HntP/d6dl7d8vf3
+0xkXFOzdvXf8Iek3mHwObXcfgPkRmBtrs+UlH1AIOgbdZm+ZZ11kd40XIVkagkUhdQfytuFxGsZ2
+YIEjbgThhwOeqJmLKUYW43kwzmjjjTjmqOOOPPbo449ABikkRgEBADs=
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/help/background/coortran/coor19.gif
+
+R0lGODlhwQAiAPcAAAAAAP///4tF9eACwEAAwA0ABSoA9cABxACAQAAADAAA48EAiAAAQAAAxCIF
+PABAAAALAABeAAmIAXt7AAMBALkxABC4AAB7AAABAAAxAADsESDE/kAAAAkAAEkAAGgYAXtAQAMM
+DLTj42iIiHsCAAPAALMBADjRBAICAMDAAAACAG41AHp7ev8A/yKYIswAzAB7ewCYmAEAAADAwAET
+ndLC91/T18DAwJ6dnTT894N/1wDAAABvAOwAAEYQAFsAAQAMAIvjAeCINABAewAMAwDFwAC4ckAA
+QAsACFwB+hAE+AkACEkATGhsEHsAAAMAADhSAwAACwBQ/ABAQAAMCwDjvAGIELkAABAEAAUGAnp6
+e///ACIimMzMAAGYmHwAAMAAwJ4BCTRpwKvXR8AAAJ4BADR5D6sX5sAgAgVDwPVvAMBsbsBvAAVy
+APUAEMQgAMAoAPVhAMh3A3spACoAAIBNTUB7AAwDAOO0AIhsTAkDAEm0AGhoErMAADgBMgABEAAD
+AACzAAA4AgB7QAADDACz4wE4iAA4BAIAADUBCHp6eiIiIszMzAAJQADsDgAeUU7lGJ2fA8K51kuf
+452fnsK5CkufKwEAIgHDAjRwQ3tAAAMMAL7FAvK4Q7jjZNiIEAAMDQDxKgHwwAACQADACgAA1AFu
+EAAAzCcBEAABNACIEC4EAAsNDQEDA58JnejA929H15+dnej8929/1wAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH+N0ltYWdlIGdlbmVyYXRl
+ZCBieSBBbGFkZGluIEdob3N0c2NyaXB0IChkZXZpY2U9cHBtcmF3KQoAIfkEAQAAAQAsAAAAAMEA
+IgAACP4AAwgcSLCgwYMIEypcyLChw4cQI0qcSLGixYsYM2rcyLGjx48gQ4ocSbKkyZMoU6pcybKl
+y5cwY8qcSbOmzZs4c+rcybOnT5AAUgIYepEoxaAdjRYdypSpSKUCoUZ0OpAqUaQKmxJ0inUqVqoO
+m1rN+LXqU4NdvQYwejUoUqkIoZadmBZu1q9vMeI1GzLt2qNzy14NO5fv1IJ2E+41fLRqYY9w/RJ2
+rLSt5INs0SqO6zex5qh1N3rmLHb0X8prL9+lvNhr5M5/YaNVzXm2xq5gSZdeDfo07c2pwZomHXd2
+7tSYfyO+rLyh3OEScUedvrW0VOutIXqWfPz0cujIqZQzriiXIfbRbPOC31y5ue3i36/Xddu8/Fay
+0t0fRp6Xbm/vzNGmWmLMVccXgZUtt9Rx6z2UnlZ0CUdfbckRCNx7z4VnHITj3TYhZPct9dmF2ukX
+YlYRfjSYiicK5d+LKEZ3FlBvmShaYymSqN1PI/LYIGKQ2cjjkEQWaeSRSCap5JJMNunkk1BGKeWU
+VFZp5ZVYJhQQADs=
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.spenvis.oma.be/spenvis/images/helpback.gif
+
+R0lGODdhAgACAPcAANH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/
+6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6NH/6CwAAAAAAgACAAcIBgABCAQQ
+EAA7
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.spenvis.oma.be/spenvis/js/target.js
+
+//   - usage: <A HREF=3D"subscribers.html" onclick=3D"return =
+outwin(this,'MAIN')">here</A>=0A=
+function outwin(obj,target)=0A=
+{=0A=
+  url=3Dobj.href=0A=
+  if (target =3D=3D "MAIN")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,hotkeys=3Dno,resizable=3Dyes,scro=
+llbars=3Dyes')=0A=
+  if (target =3D=3D "HELP")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,toolbar=3Dyes,hotkeys=3Dno,resiza=
+ble=3Dyes,scrollbars=3Dyes')=0A=
+  if (target =3D=3D "SPENVIS_HOME")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,menubar=3Dyes,toolbar=3Dyes,hotke=
+ys=3Dno,resizable=3Dyes,scrollbars=3Dyes')=0A=
+  if (target =3D=3D "RESULTS")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,menubar=3Dyes,hotkeys=3Dno,resiza=
+ble=3Dyes,scrollbars=3Dyes,width=3D840,height=3D640')=0A=
+  if (target =3D=3D "EXTERNAL")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,toolbar=3Dyes,menubar=3Dyes,locat=
+ion=3Dyes,resizable=3Dyes,scrollbars=3Dyes')=0A=
+  if (target =3D=3D "ECSS")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,toolbar=3Dyes,hotkeys=3Dno,resiza=
+ble=3Dyes,scrollbars=3Dyes')=0A=
+  if (target =3D=3D "BUGS")=0A=
+    =
+W=3Dwindow.open('',target,'width=3D640,height=3D400,scrollbars=3Dyes,resi=
+zable=3Dyes')=0A=
+  if (target =3D=3D "UPDATES")=0A=
+    =
+W=3Dwindow.open('',target,'width=3D640,height=3D400,scrollbars=3Dyes,resi=
+zable=3Dyes')=0A=
+  if (target =3D=3D "MESSAGE")=0A=
+    =
+W=3Dwindow.open('',target,'width=3D400,height=3D300,scrollbars=3Dyes,resi=
+zable=3Dyes')=0A=
+=0A=
+  W.focus()=0A=
+  window.open(url,target)=0A=
+  return false=0A=
+}=0A=
+=0A=
+//   - usage: <A HREF=3D"subscribers.html" TARGET=3DMAIN =
+onclick=3D"return focuswin(this)">here</A>=0A=
+function focuswin(obj,target)=0A=
+{=0A=
+  target=3Dobj.target=0A=
+  url=3Dobj.href=0A=
+=0A=
+  if (target =3D=3D "MAIN")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,hotkeys=3Dno,resizable=3Dyes,scro=
+llbars=3Dyes')=0A=
+  if (target =3D=3D "HELP")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,toolbar=3Dyes,hotkeys=3Dno,resiza=
+ble=3Dyes,scrollbars=3Dyes')=0A=
+  if (target =3D=3D "SPENVIS_HOME")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,menubar=3Dyes,toolbar=3Dyes,hotke=
+ys=3Dno,resizable=3Dyes,scrollbars=3Dyes')=0A=
+  if (target =3D=3D "SEARCH")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,toolbar=3Dyes,hotkeys=3Dno,resiza=
+ble=3Dyes,scrollbars=3Dyes')=0A=
+  if (target =3D=3D "RESULTS")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,menubar=3Dyes,hotkeys=3Dno,resiza=
+ble=3Dyes,scrollbars=3Dyes,width=3D840,height=3D640')=0A=
+  if (target =3D=3D "EXTERNAL")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,toolbar=3Dyes,menubar=3Dyes,locat=
+ion=3Dyes,resizable=3Dyes,scrollbars=3Dyes')=0A=
+  if (target =3D=3D "ECSS")=0A=
+    =
+W=3Dwindow.open('',target,'status=3Dyes,toolbar=3Dyes,hotkeys=3Dno,resiza=
+ble=3Dyes,scrollbars=3Dyes')=0A=
+  if (target =3D=3D "UPDATES")=0A=
+    =
+W=3Dwindow.open('',target,'width=3D840,height=3D640,scrollbars=3Dyes,resi=
+zable=3Dyes')=0A=
+  if (target =3D=3D "MESSAGE")=0A=
+    =
+W=3Dwindow.open('',target,'width=3D400,height=3D300,scrollbars=3Dyes,resi=
+zable=3Dyes')=0A=
+=0A=
+  W.focus()=0A=
+  window.open(url,target)=0A=
+  return false=0A=
+}=0A=
+=0A=
+function reportwin(model, report_url)=0A=
+{=0A=
+  =
+W=3Dwindow.open('','RESULTS','status=3Dyes,menubar=3Dyes,hotkeys=3Dno,res=
+izable=3Dyes,scrollbars=3Dyes,width=3D840,height=3D640')=0A=
+  W.focus()=0A=
+  W.document.open()=0A=
+  W.document.write("<HEAD><TITLE>" + model +" status window</TITLE>")=0A=
+  W.document.write("<LINK REL=3D\"stylesheet\" TYPE=3D\"text/css\" =
+HREF=3D\"/spenvis/style/spenvis.css\" /></HEAD>")=0A=
+  W.document.write('<BODY CLASS=3D\"statusWindow\">')=0A=
+  W.document.write("<CENTER><H3>" + model +" status =
+window</H3></CENTER>")=0A=
+  W.document.write(model + " succesfully completed. ")=0A=
+  W.document.write('Click <A href=3D"' + report_url + '">here</A> ')=0A=
+  W.document.write("to view the report file. View the main window ")=0A=
+  W.document.write("for a list of all output files and to produce =
+plots.")=0A=
+  W.document.write("</BODY>")=0A=
+  W.document.close()=0A=
+  return false=0A=
+}=0A=
+
+------=_NextPart_000_0000_01C5DBD6.8172DD00--

@@ -1,0 +1,23 @@
+# Makefile for GCC g++ ###########################
+all: library models planets
+
+testing: all
+	make -C testing -f makefile.icc
+
+library: lib
+	make -C src -f makefile.icc
+
+models: lib
+	make -C model -f makefile.icc
+
+planets: lib models
+	make -C planet -f makefile.icc
+
+lib:
+	mkdir $lib
+
+clean:
+	make -C src -f makefile.icc clean
+	make -C model -f makefile.icc clean
+	make -C planet -f makefile.icc clean
+	make -C testing -f makefile.icc clean
