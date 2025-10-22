@@ -21,7 +21,7 @@ void handle_error(int status) {
 }
 
 lathys_europa_3d::lathys_europa_3d() {
-	const std::string& filename = "/home/parallels/Desktop/Parallels Shared Folders/Home/research/icymoon_raytracing/src_venv/rtc_cost_reduction/model/3d_model/summed_density.nc";
+	const std::string& filename = "/media/psf/Home/research/icymoon_raytracing/src_venv/rtc_cost_reduction/model/3d_model/summed_density.nc";
 	loadData(filename);
 }
 

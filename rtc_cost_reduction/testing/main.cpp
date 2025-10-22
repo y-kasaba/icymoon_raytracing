@@ -198,7 +198,7 @@ double LO_cutoff(const rtc::vector &r)
 
 std::tuple<std::vector<double>, std::vector<double>, std::vector<double>> Read_position()
 {
-    std::ifstream ifs("/home/parallels/Desktop/Parallels Shared Folders/Home/research/icymoon_raytracing/src_venv/rtc_cost_reduction/testing/position.txt");
+    std::ifstream ifs("/media/psf/Home/research/icymoon_raytracing/src_venv/rtc_cost_reduction/testing/position.txt");
     if (ifs.fail()) {
        std::cerr << "Cannot open file\n";
        exit(0);
