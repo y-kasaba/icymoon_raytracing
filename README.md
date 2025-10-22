@@ -1,11 +1,10 @@
-# icymoon_raytracing
+# icymoon_raytracing on Ubuntu
 
 ### レイトレーシング実行
+* Boost C++ インストール (参照: https://ja.linux-console.net/?p=13955) [sudo apt udo apt install libboost-all-dev]
 * rtc_cost_reduction で “make”を実行
 * rtc_cost_reduction/testing で “make”を実行
 * rtc_cost_reduction/testing で “bash mkray3.sh” を実行
-
-### 対応OS: Ubuntu
 
 ### deimos上で動かすには
 #### (1) ライブラリのインストール (参照先: https://ja.linux-console.net/?p=13955)
