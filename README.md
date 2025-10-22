@@ -1,5 +1,8 @@
 # icymoon_raytracing on Ubuntu
 
+### 導入
+git clone git@github.com:y-kasaba/icymoon_raytracing.git
+
 ### レイトレーシング実行
 * Boost C++ インストール (参照: https://ja.linux-console.net/?p=13955) [sudo apt udo apt install libboost-all-dev]
 * rtc_cost_reduction で “make”を実行
